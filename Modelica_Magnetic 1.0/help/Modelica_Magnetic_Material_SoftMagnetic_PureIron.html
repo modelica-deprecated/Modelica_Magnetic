@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica_Magnetic.Material.SoftMagnetic.PureIron</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Pure iron &quot;">
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE PureIron<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.Material.SoftMagnetic.PureIron"></A><A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic"
+>Modelica_Magnetic.Material.SoftMagnetic</A>.PureIron</H2>
+<B>Pure iron </B>
+<P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.SoftMagnetic.ApproximationDataS.png" ALT="Modelica_Magnetic.Material.SoftMagnetic.PureIron.RFe80" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_SoftMagnetic_PureIron.html#Modelica_Magnetic.Material.SoftMagnetic.PureIron.RFe80"
+>RFe80</A>
+</TD><TD>Hyperm 0 (RFe80)</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.SoftMagnetic.ApproximationDataS.png" ALT="Modelica_Magnetic.Material.SoftMagnetic.PureIron.VacoferS2" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_SoftMagnetic_PureIron.html#Modelica_Magnetic.Material.SoftMagnetic.PureIron.VacoferS2"
+>VacoferS2</A>
+</TD><TD>VACOFER S2 (99.95% Fe)</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE RFe80<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.SoftMagnetic.PureIron.RFe80I.png" ALT="Modelica_Magnetic.Material.SoftMagnetic.PureIron.RFe80" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.SoftMagnetic.PureIron.RFe80"></A><A HREF="Modelica_Magnetic_Material_SoftMagnetic_PureIron.html#Modelica_Magnetic.Material.SoftMagnetic.PureIron"
+>Modelica_Magnetic.Material.SoftMagnetic.PureIron</A>.RFe80</H2>
+<B>Hyperm 0 (RFe80)</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic"
+>SoftMagnetic</a> for a description of all soft magnetic material characteristics of this package.
+</p>
+<p>
+Source of B(H) characteristics: Product catalogue <i>Magnequench</i>, 2000
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>RelativePermeability</A></TD><TD>my_i</TD><TD>123</TD><TD>Initial relative permeability at B=0 [1]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_myMax</TD><TD>1.27</TD><TD>Flux density at maximum relative permeability [T]</TD></TR>
+<TR><TD>Real</TD><TD>c_a</TD><TD>44410</TD><TD>Coefficient of approximation function</TD></TR>
+<TR><TD>Real</TD><TD>c_b</TD><TD>6.4</TD><TD>Coefficient of approximation function</TD></TR>
+<TR><TD>Real</TD><TD>n</TD><TD>10</TD><TD>Exponent of approximation function</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> RFe80 =
+  <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic.ApproximationData"
+>Modelica_Magnetic.Material.SoftMagnetic.ApproximationData</A> (
+    my_i=123,
+    B_myMax=1.27,
+    c_a=44410,
+    c_b=6.4,
+    n=10) <font color="darkgreen">&quot;Hyperm 0 (RFe80)&quot;</font>;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE VacoferS2<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.SoftMagnetic.PureIron.RFe80I.png" ALT="Modelica_Magnetic.Material.SoftMagnetic.PureIron.VacoferS2" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.SoftMagnetic.PureIron.VacoferS2"></A><A HREF="Modelica_Magnetic_Material_SoftMagnetic_PureIron.html#Modelica_Magnetic.Material.SoftMagnetic.PureIron"
+>Modelica_Magnetic.Material.SoftMagnetic.PureIron</A>.VacoferS2</H2>
+<B>VACOFER S2 (99.95% Fe)</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic"
+>SoftMagnetic</a> for a description of all soft magnetic material characteristics of this package.
+</p>
+<p>
+Source of B(H) characteristics:
+<dd>
+<p><i>Boll, R.</i>: Weichmagnetische Werkstoffe: Einf&uuml;hrung in den Magnetismus, VAC-Werkstoffe und ihre Anwendungen. 4th ed. Berlin, M&uuml;nchen: Siemens Aktiengesellschaft 1990</p>
+</dd>
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>RelativePermeability</A></TD><TD>my_i</TD><TD>2666</TD><TD>Initial relative permeability at B=0 [1]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_myMax</TD><TD>1.15</TD><TD>Flux density at maximum relative permeability [T]</TD></TR>
+<TR><TD>Real</TD><TD>c_a</TD><TD>187000</TD><TD>Coefficient of approximation function</TD></TR>
+<TR><TD>Real</TD><TD>c_b</TD><TD>4.24</TD><TD>Coefficient of approximation function</TD></TR>
+<TR><TD>Real</TD><TD>n</TD><TD>19</TD><TD>Exponent of approximation function</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> VacoferS2 =
+  <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic.ApproximationData"
+>Modelica_Magnetic.Material.SoftMagnetic.ApproximationData</A> (
+    my_i=2666,
+    B_myMax=1.15,
+    c_a=187000,
+    c_b=4.24,
+    n=19) <font color="darkgreen">&quot;VACOFER S2 (99.95% Fe)&quot;</font>;
+</PRE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Oct 11 17:08:26 2007.
+</address></BODY>
+</HTML>

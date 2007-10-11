@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica_Magnetic.Examples</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Illustration of component usage with simple models of various devices&quot;">
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Examples<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.Examples"></A><A HREF="Modelica_Magnetic.html#Modelica_Magnetic"
+>Modelica_Magnetic</A>.Examples</H2>
+<B>Illustration of component usage with simple models of various devices</B>
+<P>
+<H3>Information</H3>
+<PRE></pre>
+<pre></PRE><P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Examples.SaturatedInductorS.png" ALT="Modelica_Magnetic.Examples.SaturatedInductor" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Examples.html#Modelica_Magnetic.Examples.SaturatedInductor"
+>SaturatedInductor</A>
+</TD><TD>Inductor with saturation in the ferromagnetic core</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Examples.ElectrodynamicActuatorS.png" ALT="Modelica_Magnetic.Examples.ElectrodynamicActuator" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Examples_ElectrodynamicActuator.html#Modelica_Magnetic.Examples.ElectrodynamicActuator"
+>ElectrodynamicActuator</A>
+</TD><TD>Two translatory electrodynamic actuator models of different modelling depth and their usage</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Examples.ElectromagneticActuatorS.png" ALT="Modelica_Magnetic.Examples.ElectromagneticActuator" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Examples_ElectromagneticActuator.html#Modelica_Magnetic.Examples.ElectromagneticActuator"
+>ElectromagneticActuator</A>
+</TD><TD>Two models of a reluctance actuator of different modelling depth and their comparison and usage</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE SaturatedInductor<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Examples.SaturatedInductorI.png" ALT="Modelica_Magnetic.Examples.SaturatedInductor" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Examples.SaturatedInductor"></A><A HREF="Modelica_Magnetic_Examples.html#Modelica_Magnetic.Examples"
+>Modelica_Magnetic.Examples</A>.SaturatedInductor</H2>
+<B>Inductor with saturation in the ferromagnetic core</B><p>
+<IMG SRC="Modelica_Magnetic.Examples.SaturatedInductorD.png" ALT="Modelica_Magnetic.Examples.SaturatedInductor">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+This model demonstrates the effects of non-linear magnetisation characteristics of soft magnetic materials (hysteresis neglected). A sinusoidal voltage is applied to an inductor with a closed ferromagnetic core of rectangular shape. Set the <b>tolerance</b> to <b>1e-7</b>, <b>simulate for 0.1 s</b> and plot for example:
+</p>
+<pre>
+    coil.i vs. time           // non-harmonic current due to saturation of the core material
+    R_mFe.my_r vs. R_mFe.B    // relative permeability vs. flux density inside core
+    R_mFe.B vs. H_fe          // magnetisation curve B(H); hysteresis neglected
+</pre>
+<p>
+The magnetisation characteristics of the flux tube element representing the ferromagnetic core can easily be changed from simplified linear behaviour (nonLinearPermeability set to false and R_mFe.my_rConst set to a positive value, preferably my_rConst >> 1) to non-linear behaviour (e.g. selection of one of the electric sheets in <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic"
+>Material.SoftMagnetic</a> with nonLinearPermeability set to true). This enables for convenient inital design of magnetic circuits with linear material characteristics prior to simulation with non-linear behaviour. </p>
+<p>
+N.B.:<br>
+If the supply voltage has a zero-crossing when applied to the inductor at time t=0 (i.e. u_source.phase set to zero instead of pi/2), then the inrush current that is typical for switching of inductive loads can be observed.
+</p>
+<pre></PRE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> SaturatedInductor <font color="darkgreen">
+  &quot;Inductor with saturation in the ferromagnetic core&quot;</font>
+
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>SI.MagneticFieldStrength</A> H_fe <font color="darkgreen">
+    &quot;Magnetic field strength inside core for plot of characteristics B(H)&quot;</font>;
+  <A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources.ElectroMagneticConverter"
+>Sources.ElectroMagneticConverter</A> coil(w=1000, c_coupl=0.85) <font color="darkgreen">&quot;Inductor coil&quot;</font>;
+  <A HREF="Modelica_Magnetic.html#Modelica_Magnetic.MagneticGround"
+>MagneticGround</A> magGround;
+  <A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape.Cuboid"
+>Modelica_Magnetic.FluxTube.FixedShape.Cuboid</A> R_mFe(
+    l=4*0.1,
+    a=0.04,
+    b=0.04,
+    <font color="blue">redeclare </font><font color="blue">record</font> Material =
+      <A HREF="Modelica_Magnetic_Material_SoftMagnetic_ElectricSheet.html#Modelica_Magnetic.Material.SoftMagnetic.ElectricSheet.M350_50A"
+>Modelica_Magnetic.Material.SoftMagnetic.ElectricSheet.M350_50A</A>) <font color="darkgreen">
+    &quot;Reluctance of ferromagnetic inductor core&quot;</font>;
+
+
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Electrical_Analog_Basic.html#Modelica.Electrical.Analog.Basic.Ground"
+>Modelica.Electrical.Analog.Basic.Ground</A> ground;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Electrical_Analog_Basic.html#Modelica.Electrical.Analog.Basic.Resistor"
+>Modelica.Electrical.Analog.Basic.Resistor</A> R_coil(R=10) <font color="darkgreen">
+    &quot;Inductor coil's resistance&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Electrical_Analog_Sources.html#Modelica.Electrical.Analog.Sources.SineVoltage"
+>Modelica.Electrical.Analog.Sources.SineVoltage</A> u_source(
+    freqHz=50,
+    V=1000,
+    phase=pi/2) <font color="darkgreen">&quot;Voltage applied to inductor&quot;</font>;
+<font color="blue">equation </font>
+  <font color="red">connect</font>(coil.p_mag, R_mFe.p);
+  <font color="red">connect</font>(coil.n_mag, magGround.p);
+  <font color="red">connect</font>(u_source.p, R_coil.p);
+  <font color="red">connect</font>(R_coil.n, coil.p_el);
+  <font color="red">connect</font>(coil.n_el, u_source.n);
+  <font color="red">connect</font>(u_source.n, ground.p);
+  <font color="red">connect</font>(magGround.p, R_mFe.n);
+  H_fe = R_mFe.B/(my_0 * R_mFe.my_r);
+<font color="blue">end </font>SaturatedInductor;
+</PRE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Oct 11 17:08:20 2007.
+</address></BODY>
+</HTML>

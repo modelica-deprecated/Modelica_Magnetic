@@ -1,0 +1,630 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica_Magnetic.FluxTube.Leakage</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Leakage flux tubes with position-independent permeance and hence no force generation; my_r=1&quot;">
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Leakage<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.FluxTube.Leakage"></A><A HREF="Modelica_Magnetic_FluxTube.html#Modelica_Magnetic.FluxTube"
+>Modelica_Magnetic.FluxTube</A>.Leakage</H2>
+<B>Leakage flux tubes with position-independent permeance and hence no force generation; my_r=1</B>
+<P>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please have a look at <A HREF="Modelica_Magnetic_UsersGuide.html#Modelica_Magnetic.UsersGuide.ReluctanceForceCalculation"
+>Reluctance forces</a> in the Users Guide for an explanation of the different flux tube categories and resulting sub-packages.
+</p>
+<p>
+Except for the element <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.LeakageWithCoefficient"
+>LeakageWithCoefficient</a>, the permeances of all elements of this package are calculated from their geometry. These flux tube elements are intended for modelling of leakage fields through vacuum, air and other media with a relative permeability my_r=1.
+</p>
+<p>
+All dimensions are defined as parameters. As a result, the shape of these elements will remain constant during dynamic simulation of actuators and reluctance forces will not be generated in these flux tube elements. A simple leakage flux tube with reluctance force generation is provided with the element <A HREF="Modelica_Magnetic_FluxTube_Force.html#Modelica_Magnetic.FluxTube.Force.LeakageAroundPoles"
+>Force.LeakageAroundPoles</a>. In cases where the accuracy of that element is not sufficient, the leakage elements of this package can be adapted and extended so that they are able to change their shape with armature motion and to generate reluctance forces. This requires an extension of the partial model <A HREF="Modelica_Magnetic_FluxTube_Force.html#Modelica_Magnetic.FluxTube.Force.PartialForce"
+>Force.PartialForce</a>, a higher variability of the variables representing the flux tube's dimensions, definition of a relationship between armature position and these dimensions and determination of the analytic derivative dG_m/dx of the flux tube's permeance G_m with respect to armature position x.
+</p>
+<pre></PRE><P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageS.png" ALT="Modelica_Magnetic.FluxTube.Leakage.PartialLeakage" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"
+>PartialLeakage</A>
+</TD><TD>Base class for leakage flux tubes with position-independent permeance and hence no force generation; my_r=1</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageS.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterCylinder" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.QuarterCylinder"
+>QuarterCylinder</A>
+</TD><TD>Leakage flux from one edge to the opposite plane through a quarter cylinder</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageS.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterHollowCylinder" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.QuarterHollowCylinder"
+>QuarterHollowCylinder</A>
+</TD><TD>Leakage flux in circumferential direction through a quarter hollow cylinder</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageS.png" ALT="Modelica_Magnetic.FluxTube.Leakage.HalfCylinder" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.HalfCylinder"
+>HalfCylinder</A>
+</TD><TD>Leakage flux through the edges of a half cylinder</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageS.png" ALT="Modelica_Magnetic.FluxTube.Leakage.HalfHollowCylinder" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.HalfHollowCylinder"
+>HalfHollowCylinder</A>
+</TD><TD>Leakage flux in circumferential direction through a half hollow cylinder</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageS.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterSphere" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.QuarterSphere"
+>QuarterSphere</A>
+</TD><TD>Leakage flux through the corners of a quarter sphere</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageS.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterHollowSphere" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.QuarterHollowSphere"
+>QuarterHollowSphere</A>
+</TD><TD>Leakage flux through the edges of a qarter hollow sphere</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageS.png" ALT="Modelica_Magnetic.FluxTube.Leakage.EighthOfSphere" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.EighthOfSphere"
+>EighthOfSphere</A>
+</TD><TD>Leakage flux through one edge and the opposite plane of an eighth of a sphere</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageS.png" ALT="Modelica_Magnetic.FluxTube.Leakage.EighthOfHollowSphere" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.EighthOfHollowSphere"
+>EighthOfHollowSphere</A>
+</TD><TD>Leakage flux through one edge and the opposite plane of an eighth of a hollow sphere</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageS.png" ALT="Modelica_Magnetic.FluxTube.Leakage.CoaxCylindersEndFaces" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.CoaxCylindersEndFaces"
+>CoaxCylindersEndFaces</A>
+</TD><TD>Leakage flux between the end planes of a inner solid cylinder and a coaxial outer hollow cylinder</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageS.png" ALT="Modelica_Magnetic.FluxTube.Leakage.LeakageWithCoefficient" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.LeakageWithCoefficient"
+>LeakageWithCoefficient</A>
+</TD><TD>Leakage reluctance with respect to the reluctance of a useful flux path (not for dynamic simulation of actuators)</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE PartialLeakage<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageI.png" ALT="Modelica_Magnetic.FluxTube.Leakage.PartialLeakage" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"></A><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Modelica_Magnetic.FluxTube.Leakage</A>.PartialLeakage</H2>
+<B>Base class for leakage flux tubes with position-independent permeance and hence no force generation; my_r=1</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.FluxTube.Leakage.PartialLeakage">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">partial </font><font color="blue">model</font> PartialLeakage <font color="darkgreen">
+  &quot;Base class for leakage flux tubes with position-independent permeance and hence no force generation; my_r=1&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.TwoPortComponent"
+>Modelica_Magnetic.Interfaces.TwoPortComponent</A>;
+
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Reluctance"
+>SI.Reluctance</A> R_m <font color="darkgreen">&quot;Magnetic reluctance&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Permeance"
+>SI.Permeance</A> G_m <font color="darkgreen">&quot;Magnetic permeance&quot;</font>;
+
+
+<font color="blue">equation </font>
+  V_mag = Phi * R_m;
+  R_m = 1/G_m;
+
+<font color="blue">end </font>PartialLeakage;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE QuarterCylinder<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageI.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterCylinder" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.Leakage.QuarterCylinder"></A><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Modelica_Magnetic.FluxTube.Leakage</A>.QuarterCylinder</H2>
+<B>Leakage flux from one edge to the opposite plane through a quarter cylinder</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterCylinder">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>Thickness</A></TD><TD>t</TD><TD>0.1</TD><TD>Depth orthogonal to flux (=2*pi*r for cylindrical pole and r&gt;&gt;distance between edge and plane) [m]</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/Leakage/QuarterCylinder.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> QuarterCylinder <font color="darkgreen">
+  &quot;Leakage flux from one edge to the opposite plane through a quarter cylinder&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"
+>PartialLeakage</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>SI.Thickness</A> t = 0.1 <font color="darkgreen">
+    &quot;Depth orthogonal to flux (=2*pi*r for cylindrical pole and r&gt;&gt;distance between edge and plane)&quot;</font>;
+
+
+<font color="blue">equation </font>
+  G_m = my_0 * 0.52 * t;
+
+<font color="blue">end </font>QuarterCylinder;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE QuarterHollowCylinder<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageI.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterHollowCylinder" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.Leakage.QuarterHollowCylinder"></A><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Modelica_Magnetic.FluxTube.Leakage</A>.QuarterHollowCylinder</H2>
+<B>Leakage flux in circumferential direction through a quarter hollow cylinder</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterHollowCylinder">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>Thickness</A></TD><TD>t</TD><TD>0.1</TD><TD>Depth orthogonal to flux (=2*pi*r for cylindrical pole and r&gt;&gt;r_i) [m]</TD></TR>
+<TR><TD>Real</TD><TD>ratio</TD><TD>1</TD><TD>Constant ratio b/r_i</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/Leakage/QuarterHollowCylinder.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> QuarterHollowCylinder <font color="darkgreen">
+  &quot;Leakage flux in circumferential direction through a quarter hollow cylinder&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"
+>PartialLeakage</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>SI.Thickness</A> t = 0.1 <font color="darkgreen">
+    &quot;Depth orthogonal to flux (=2*pi*r for cylindrical pole and r&gt;&gt;r_i)&quot;</font>;
+  <font color="blue">parameter </font>Real ratio = 1 <font color="darkgreen">&quot;Constant ratio b/r_i&quot;</font>;
+
+
+<font color="blue">equation </font>
+  G_m = 2* my_0 * t *<font color="red"> Modelica.Math.log</font>(1 + ratio) /pi;
+
+<font color="blue">end </font>QuarterHollowCylinder;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE HalfCylinder<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageI.png" ALT="Modelica_Magnetic.FluxTube.Leakage.HalfCylinder" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.Leakage.HalfCylinder"></A><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Modelica_Magnetic.FluxTube.Leakage</A>.HalfCylinder</H2>
+<B>Leakage flux through the edges of a half cylinder</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.FluxTube.Leakage.HalfCylinder">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>Thickness</A></TD><TD>t</TD><TD>0.1</TD><TD>Depth orthogonal to flux (=2*pi*r for cylindrical pole and r&gt;&gt;distance between edges) [m]</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/Leakage/HalfCylinder.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> HalfCylinder <font color="darkgreen">
+  &quot;Leakage flux through the edges of a half cylinder&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"
+>PartialLeakage</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>SI.Thickness</A> t = 0.1 <font color="darkgreen">
+    &quot;Depth orthogonal to flux (=2*pi*r for cylindrical pole and r&gt;&gt;distance between edges)&quot;</font>;
+
+
+<font color="blue">equation </font>
+  G_m = my_0 * 0.26 * t;
+
+<font color="blue">end </font>HalfCylinder;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE HalfHollowCylinder<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageI.png" ALT="Modelica_Magnetic.FluxTube.Leakage.HalfHollowCylinder" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.Leakage.HalfHollowCylinder"></A><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Modelica_Magnetic.FluxTube.Leakage</A>.HalfHollowCylinder</H2>
+<B>Leakage flux in circumferential direction through a half hollow cylinder</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.FluxTube.Leakage.HalfHollowCylinder">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>Thickness</A></TD><TD>t</TD><TD>0.1</TD><TD>Depth orthogonal to flux (=2*pi*r for cylindrical pole and r&gt;&gt;r_i) [m]</TD></TR>
+<TR><TD>Real</TD><TD>ratio</TD><TD>1</TD><TD>Constant ratio b/r_i</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/Leakage/HalfHollowCylinder.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> HalfHollowCylinder <font color="darkgreen">
+  &quot;Leakage flux in circumferential direction through a half hollow cylinder&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"
+>PartialLeakage</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>SI.Thickness</A> t = 0.1 <font color="darkgreen">
+    &quot;Depth orthogonal to flux (=2*pi*r for cylindrical pole and r&gt;&gt;r_i)&quot;</font>;
+  <font color="blue">parameter </font>Real ratio = 1 <font color="darkgreen">&quot;Constant ratio b/r_i&quot;</font>;
+
+
+<font color="blue">equation </font>
+  G_m = my_0 * t *<font color="red"> Modelica.Math.log</font>(1 + ratio) /pi;
+
+<font color="blue">end </font>HalfHollowCylinder;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE QuarterSphere<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageI.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterSphere" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.Leakage.QuarterSphere"></A><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Modelica_Magnetic.FluxTube.Leakage</A>.QuarterSphere</H2>
+<B>Leakage flux through the corners of a quarter sphere</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterSphere">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Diameter"
+>Diameter</A></TD><TD>d</TD><TD>0.01</TD><TD>Diameter of quarter sphere [m]</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/Leakage/QuarterSphere.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> QuarterSphere <font color="darkgreen">
+  &quot;Leakage flux through the corners of a quarter sphere&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"
+>PartialLeakage</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Diameter"
+>SI.Diameter</A> d = 0.01 <font color="darkgreen">&quot;Diameter of quarter sphere&quot;</font>;
+
+
+<font color="blue">equation </font>
+  G_m = my_0 * 0.077 * d;
+
+<font color="blue">end </font>QuarterSphere;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE QuarterHollowSphere<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageI.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterHollowSphere" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.Leakage.QuarterHollowSphere"></A><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Modelica_Magnetic.FluxTube.Leakage</A>.QuarterHollowSphere</H2>
+<B>Leakage flux through the edges of a qarter hollow sphere</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.FluxTube.Leakage.QuarterHollowSphere">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>Thickness</A></TD><TD>t</TD><TD>0.01</TD><TD>Thickness of sperical shell [m]</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/Leakage/QuarterHollowSphere.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> QuarterHollowSphere <font color="darkgreen">
+  &quot;Leakage flux through the edges of a qarter hollow sphere&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"
+>PartialLeakage</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>SI.Thickness</A> t = 0.01 <font color="darkgreen">&quot;Thickness of sperical shell&quot;</font>;
+
+
+<font color="blue">equation </font>
+  G_m = my_0 * 0.25 * t;
+
+<font color="blue">end </font>QuarterHollowSphere;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE EighthOfSphere<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageI.png" ALT="Modelica_Magnetic.FluxTube.Leakage.EighthOfSphere" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.Leakage.EighthOfSphere"></A><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Modelica_Magnetic.FluxTube.Leakage</A>.EighthOfSphere</H2>
+<B>Leakage flux through one edge and the opposite plane of an eighth of a sphere</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.FluxTube.Leakage.EighthOfSphere">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>Radius</A></TD><TD>r</TD><TD>0.01</TD><TD>Radius of eighth of sphere [m]</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/Leakage/EighthOfSphere.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> EighthOfSphere <font color="darkgreen">
+  &quot;Leakage flux through one edge and the opposite plane of an eighth of a sphere&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"
+>PartialLeakage</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>SI.Radius</A> r = 0.01 <font color="darkgreen">&quot;Radius of eighth of sphere&quot;</font>;
+
+
+<font color="blue">equation </font>
+  G_m = my_0 * 0.308 * r;
+
+<font color="blue">end </font>EighthOfSphere;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE EighthOfHollowSphere<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageI.png" ALT="Modelica_Magnetic.FluxTube.Leakage.EighthOfHollowSphere" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.Leakage.EighthOfHollowSphere"></A><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Modelica_Magnetic.FluxTube.Leakage</A>.EighthOfHollowSphere</H2>
+<B>Leakage flux through one edge and the opposite plane of an eighth of a hollow sphere</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.FluxTube.Leakage.EighthOfHollowSphere">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>Thickness</A></TD><TD>t</TD><TD>0.01</TD><TD>Thickness of sperical shell [m]</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/Leakage/EighthOfHollowSphere.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> EighthOfHollowSphere <font color="darkgreen">
+  &quot;Leakage flux through one edge and the opposite plane of an eighth of a hollow sphere&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"
+>PartialLeakage</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Thickness"
+>SI.Thickness</A> t = 0.01 <font color="darkgreen">&quot;Thickness of sperical shell&quot;</font>;
+
+
+<font color="blue">equation </font>
+  G_m = my_0 * 0.5 * t;
+
+<font color="blue">end </font>EighthOfHollowSphere;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE CoaxCylindersEndFaces<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageI.png" ALT="Modelica_Magnetic.FluxTube.Leakage.CoaxCylindersEndFaces" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.Leakage.CoaxCylindersEndFaces"></A><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Modelica_Magnetic.FluxTube.Leakage</A>.CoaxCylindersEndFaces</H2>
+<B>Leakage flux between the end planes of a inner solid cylinder and a coaxial outer hollow cylinder</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.FluxTube.Leakage.CoaxCylindersEndFaces">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>Radius</A></TD><TD>r_0</TD><TD>10e-3</TD><TD>Radius of inner solid cylinder [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>Radius</A></TD><TD>r_1</TD><TD>17e-3</TD><TD>Inner radius of outer hollow cylinder [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>Radius</A></TD><TD>r_2</TD><TD>20e-3</TD><TD>Outer radius of outer hollow cylinder [m]</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/Leakage/CoaxCylindersEndFaces.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> CoaxCylindersEndFaces <font color="darkgreen">
+  &quot;Leakage flux between the end planes of a inner solid cylinder and a coaxial outer hollow cylinder&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"
+>PartialLeakage</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>SI.Radius</A> r_0 = 10e-3 <font color="darkgreen">&quot;Radius of inner solid cylinder&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>SI.Radius</A> r_1 = 17e-3 <font color="darkgreen">&quot;Inner radius of outer hollow cylinder&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>SI.Radius</A> r_2 = 20e-3 <font color="darkgreen">&quot;Outer radius of outer hollow cylinder&quot;</font>;
+
+
+<font color="blue">equation </font>
+  <font color="red">assert</font>(<font color="red">Modelica.Math.log</font>(r_2/r_1) &gt;= 2*(r_2-r_1)/(r_1+r_0), &quot;No proper values assigned to Radii r_0...r_2!&quot;);
+  G_m = 2*my_0 *<font color="red"> sqrt</font>( ((r_1+r_0)/2 *<font color="red"> Modelica.Math.log</font>(r_2/r_1))^2 - (r_2-r_1)^2);
+
+<font color="blue">end </font>CoaxCylindersEndFaces;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE LeakageWithCoefficient<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageI.png" ALT="Modelica_Magnetic.FluxTube.Leakage.LeakageWithCoefficient" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.Leakage.LeakageWithCoefficient"></A><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Modelica_Magnetic.FluxTube.Leakage</A>.LeakageWithCoefficient</H2>
+<B>Leakage reluctance with respect to the reluctance of a useful flux path (not for dynamic simulation of actuators)</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.FluxTube.Leakage.LeakageWithCoefficient">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</a> for a description of all elements of this package.
+</p>
+<p>
+Differently from the other flux tube elements of this package that are calculated from their geometry, this leakage reluctance is calculated with reference to the total reluctance of a useful flux path. Please refer to the <b>Parameters</b> section for an illustration of the resulting magnetic network. Exploiting <i>Kirchhoff</i>'s generalized current law, the leakage reluctance is calculated by means of a leakage coefficient c_leak.
+</p>
+<p>
+<b>Attention:</b> <br>
+This element must <b>not</b> be used <b>for dynamic simulation of</b> electro-magneto-mechanical <b>actuators</b>, where the shape of at least one flux tube element with reluctance force generation in the useful flux path changes with armature motion (e.g. air gap). This change results in a non-zero derivative dG_m/dx of those elements permeance G_m with respect to armature position x, which in turn will lead to a non-zero derivative of the leakage element's permeance with respect to armature position. This would result in a reluctance force generated by the leakage element that is not accounted for properly. Instead, use the leakage element for static analyses of magnetic networks only as illustrated in <A HREF="Modelica_Magnetic_Examples_ElectrodynamicActuator.html#Modelica_Magnetic.Examples.ElectrodynamicActuator.MagneticCircuitModel"
+>Examples.ElectrodynamicActuator.MagneticCircuitModel</a>.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.LeakageCoefficient"
+>LeakageCoefficient</A></TD><TD>c_leak</TD><TD>0.3</TD><TD>Ratio leakage flux/(leakage flux + useful flux) = leakage flux/total flux [1]</TD></TR>
+<TR bgcolor="#e0e0e0"><TD colspan=4>Reference reluctance</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Reluctance"
+>Reluctance</A></TD><TD>R_mUsefulTot</TD><TD>Modelica.Constants.inf</TD><TD>Total reluctance of useful flux path as reference [H-1]</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/Leakage/LeakageWithCoefficient.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> LeakageWithCoefficient <font color="darkgreen">
+  &quot;Leakage reluctance with respect to the reluctance of a useful flux path (not for dynamic simulation of actuators)&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage.PartialLeakage"
+>PartialLeakage</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.LeakageCoefficient"
+>SI.LeakageCoefficient</A> c_leak = 0.3 <font color="darkgreen">
+    &quot;Ratio leakage flux/(leakage flux + useful flux) = leakage flux/total flux&quot;</font>;
+
+
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Reluctance"
+>SI.Reluctance</A> R_mUsefulTot = Modelica.Constants.inf <font color="darkgreen">
+    &quot;Total reluctance of useful flux path as reference&quot;</font>;
+  <font color="darkgreen">//Default value to ensure proper assignment of reference reluctance in magnetic network model</font>
+
+<font color="blue">equation </font>
+  <font color="red">assert</font>(R_mUsefulTot &lt; Modelica.Constants.inf, &quot;No proper value assigned to R_mUsefulTot!&quot;);
+  c_leak * R_m = R_mUsefulTot * (1 - c_leak);<font color="darkgreen">   // Generalized Kirchhoff's current law</font>
+
+<font color="blue">end </font>LeakageWithCoefficient;
+</PRE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Oct 11 17:08:25 2007.
+</address></BODY>
+</HTML>

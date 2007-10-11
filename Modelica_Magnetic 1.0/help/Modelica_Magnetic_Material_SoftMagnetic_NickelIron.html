@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica_Magnetic.Material.SoftMagnetic.NickelIron</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Nickel iron&quot;">
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE NickelIron<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.Material.SoftMagnetic.NickelIron"></A><A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic"
+>Modelica_Magnetic.Material.SoftMagnetic</A>.NickelIron</H2>
+<B>Nickel iron</B>
+<P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.SoftMagnetic.ApproximationDataS.png" ALT="Modelica_Magnetic.Material.SoftMagnetic.NickelIron.MuMetall" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_SoftMagnetic_NickelIron.html#Modelica_Magnetic.Material.SoftMagnetic.NickelIron.MuMetall"
+>MuMetall</A>
+</TD><TD>MUMETALL (77% NiFe)</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.SoftMagnetic.ApproximationDataS.png" ALT="Modelica_Magnetic.Material.SoftMagnetic.NickelIron.Permenorm3601K3" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_SoftMagnetic_NickelIron.html#Modelica_Magnetic.Material.SoftMagnetic.NickelIron.Permenorm3601K3"
+>Permenorm3601K3</A>
+</TD><TD>PERMENORM 3601 K3 (36% NiFe)</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE MuMetall<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.SoftMagnetic.NickelIron.MuMetallI.png" ALT="Modelica_Magnetic.Material.SoftMagnetic.NickelIron.MuMetall" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.SoftMagnetic.NickelIron.MuMetall"></A><A HREF="Modelica_Magnetic_Material_SoftMagnetic_NickelIron.html#Modelica_Magnetic.Material.SoftMagnetic.NickelIron"
+>Modelica_Magnetic.Material.SoftMagnetic.NickelIron</A>.MuMetall</H2>
+<B>MUMETALL (77% NiFe)</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic"
+>SoftMagnetic</a> for a description of all soft magnetic material characteristics of this package.
+</p>
+<p>
+Source of B(H) characteristics:
+<dd>
+<p><i>Boll, R.</i>: Weichmagnetische Werkstoffe: Einf&uuml;hrung in den Magnetismus, VAC-Werkstoffe und ihre Anwendungen. 4th ed. Berlin, M&uuml;nchen: Siemens Aktiengesellschaft 1990</p>
+</dd>
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>RelativePermeability</A></TD><TD>my_i</TD><TD>27300</TD><TD>Initial relative permeability at B=0 [1]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_myMax</TD><TD>0.46</TD><TD>Flux density at maximum relative permeability [T]</TD></TR>
+<TR><TD>Real</TD><TD>c_a</TD><TD>1037500</TD><TD>Coefficient of approximation function</TD></TR>
+<TR><TD>Real</TD><TD>c_b</TD><TD>3.67</TD><TD>Coefficient of approximation function</TD></TR>
+<TR><TD>Real</TD><TD>n</TD><TD>10</TD><TD>Exponent of approximation function</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> MuMetall =
+  <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic.ApproximationData"
+>Modelica_Magnetic.Material.SoftMagnetic.ApproximationData</A> (
+    my_i=27300,
+    B_myMax=0.46,
+    c_a=1037500,
+    c_b=3.67,
+    n=10) <font color="darkgreen">&quot;MUMETALL (77% NiFe)&quot;</font>;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Permenorm3601K3<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.SoftMagnetic.NickelIron.MuMetallI.png" ALT="Modelica_Magnetic.Material.SoftMagnetic.NickelIron.Permenorm3601K3" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.SoftMagnetic.NickelIron.Permenorm3601K3"></A><A HREF="Modelica_Magnetic_Material_SoftMagnetic_NickelIron.html#Modelica_Magnetic.Material.SoftMagnetic.NickelIron"
+>Modelica_Magnetic.Material.SoftMagnetic.NickelIron</A>.Permenorm3601K3</H2>
+<B>PERMENORM 3601 K3 (36% NiFe)</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic"
+>SoftMagnetic</a> for a description of all soft magnetic material characteristics of this package.
+</p>
+<p>
+Source of B(H) characteristics:
+<dd>
+<p><i>Boll, R.</i>: Weichmagnetische Werkstoffe: Einf&uuml;hrung in den Magnetismus, VAC-Werkstoffe und ihre Anwendungen. 4th ed. Berlin, M&uuml;nchen: Siemens Aktiengesellschaft 1990</p>
+</dd>
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>RelativePermeability</A></TD><TD>my_i</TD><TD>3000</TD><TD>Initial relative permeability at B=0 [1]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_myMax</TD><TD>0.67</TD><TD>Flux density at maximum relative permeability [T]</TD></TR>
+<TR><TD>Real</TD><TD>c_a</TD><TD>50000</TD><TD>Coefficient of approximation function</TD></TR>
+<TR><TD>Real</TD><TD>c_b</TD><TD>2.39</TD><TD>Coefficient of approximation function</TD></TR>
+<TR><TD>Real</TD><TD>n</TD><TD>9.3</TD><TD>Exponent of approximation function</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> Permenorm3601K3 =
+  <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic.ApproximationData"
+>Modelica_Magnetic.Material.SoftMagnetic.ApproximationData</A> (
+    my_i=3000,
+    B_myMax=0.67,
+    c_a=50000,
+    c_b=2.39,
+    n=9.3) <font color="darkgreen">&quot;PERMENORM 3601 K3 (36% NiFe)&quot;</font>;
+</PRE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Oct 11 17:08:26 2007.
+</address></BODY>
+</HTML>

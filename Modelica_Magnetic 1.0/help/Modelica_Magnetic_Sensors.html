@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica_Magnetic.Sensors</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Sensors to measure variables in magnetic networks&quot;">
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Sensors<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.Sensors"></A><A HREF="Modelica_Magnetic.html#Modelica_Magnetic"
+>Modelica_Magnetic</A>.Sensors</H2>
+<B>Sensors to measure variables in magnetic networks</B>
+<P>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+For analysis of magnetic networks, only magnetic potential differences and magnetic flux are variables of interest. For that reason, a magnetic potential sensor is not provided.
+</p>
+<pre></PRE><P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Sensors.MagneticPotentialDifferenceSensorS.png" ALT="Modelica_Magnetic.Sensors.MagneticPotentialDifferenceSensor" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Sensors.html#Modelica_Magnetic.Sensors.MagneticPotentialDifferenceSensor"
+>MagneticPotentialDifferenceSensor</A>
+</TD><TD>Sensor to measure magnetic potential difference</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Sensors.MagneticPotentialDifferenceSensorS.png" ALT="Modelica_Magnetic.Sensors.MagneticFluxSensor" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Sensors.html#Modelica_Magnetic.Sensors.MagneticFluxSensor"
+>MagneticFluxSensor</A>
+</TD><TD>Sensor to measure magnetic flux</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE MagneticPotentialDifferenceSensor<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Sensors.MagneticPotentialDifferenceSensorI.png" ALT="Modelica_Magnetic.Sensors.MagneticPotentialDifferenceSensor" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Sensors.MagneticPotentialDifferenceSensor"></A><A HREF="Modelica_Magnetic_Sensors.html#Modelica_Magnetic.Sensors"
+>Modelica_Magnetic.Sensors</A>.MagneticPotentialDifferenceSensor</H2>
+<B>Sensor to measure magnetic potential difference</B><p>
+<IMG SRC="Modelica_Magnetic.Sensors.MagneticPotentialDifferenceSensorD.png" ALT="Modelica_Magnetic.Sensors.MagneticPotentialDifferenceSensor">
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>output <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</A></TD><TD>V_mag</TD><TD>Magnetic potential difference between ports p and n as output signal</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>&nbsp;</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> MagneticPotentialDifferenceSensor <font color="darkgreen">
+  &quot;Sensor to measure magnetic potential difference&quot;</font>
+  <font color="blue">extends </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Icons.html#Modelica.Icons.RotationalSensor"
+>Modelica.Icons.RotationalSensor</A>;
+
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</A> V_mag(
+      <font color="blue">redeclare </font><font color="blue">type</font> SignalType = <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticPotentialDifference"
+>SI.MagneticPotentialDifference</A>) <font color="darkgreen">
+    &quot;Magnetic potential difference between ports p and n as output signal&quot;</font>;
+
+  <A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>Interfaces.PositiveMagneticPort</A> p;
+  <A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>Interfaces.NegativeMagneticPort</A> n;
+<font color="blue">equation </font>
+  p.Phi = 0;
+  n.Phi = 0;
+  V_mag = p.V_mag - n.V_mag;
+<font color="blue">end </font>MagneticPotentialDifferenceSensor;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE MagneticFluxSensor<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Sensors.MagneticFluxSensorI.png" ALT="Modelica_Magnetic.Sensors.MagneticFluxSensor" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Sensors.MagneticFluxSensor"></A><A HREF="Modelica_Magnetic_Sensors.html#Modelica_Magnetic.Sensors"
+>Modelica_Magnetic.Sensors</A>.MagneticFluxSensor</H2>
+<B>Sensor to measure magnetic flux</B><p>
+<IMG SRC="Modelica_Magnetic.Sensors.MagneticPotentialDifferenceSensorD.png" ALT="Modelica_Magnetic.Sensors.MagneticFluxSensor">
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>output <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</A></TD><TD>Phi</TD><TD>Magnetic flux from port p to port n as output signal</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>&nbsp;</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> MagneticFluxSensor <font color="darkgreen">&quot;Sensor to measure magnetic flux&quot;</font>
+  <font color="blue">extends </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Icons.html#Modelica.Icons.RotationalSensor"
+>Modelica.Icons.RotationalSensor</A>;
+
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</A> Phi(
+      <font color="blue">redeclare </font><font color="blue">type</font> SignalType = <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>SI.MagneticFlux</A>) <font color="darkgreen">
+    &quot;Magnetic flux from port p to port n as output signal&quot;</font>;
+  <A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>Interfaces.PositiveMagneticPort</A> p;
+  <A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>Interfaces.NegativeMagneticPort</A> n;
+<font color="blue">equation </font>
+  p.V_mag = n.V_mag;
+  Phi = p.Phi;
+  0 = p.Phi + n.Phi;
+<font color="blue">end </font>MagneticFluxSensor;
+</PRE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Oct 11 17:08:26 2007.
+</address></BODY>
+</HTML>

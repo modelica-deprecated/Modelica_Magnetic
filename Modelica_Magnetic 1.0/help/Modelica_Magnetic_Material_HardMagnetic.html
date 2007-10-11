@@ -1,0 +1,453 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica_Magnetic.Material.HardMagnetic</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Characteristics of common permanent magnetic materials (temperature dependence considered)&quot;">
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE HardMagnetic<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.Material.HardMagnetic"></A><A HREF="Modelica_Magnetic_Material.html#Modelica_Magnetic.Material"
+>Modelica_Magnetic.Material</A>.HardMagnetic</H2>
+<B>Characteristics of common permanent magnetic materials (temperature dependence considered)</B>
+<P>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Typical values for remanence, coercivity and the temperature coefficient of remanence are provided for the common permanent magnetic materials illustrated below.
+<dl>
+<dd>
+<p><IMG SRC="../Images/Magnetic/Material/HardMagnetic/HardMagneticMaterials.png" ALT="Demagnetization characteristics of included permanent magnetic materials"></p>
+</dd>
+</dl>
+<p>
+Linear demagnetization curves are modelled. The characteristic, temperature-dependent "knee" of many permanent magnetic materials is not considered, since proper design of permanent magnetic circuits should avoid operation of permanent magnets "below" that point due to partial demagnetization. As a result, the temperature coefficient of coercivity is not considered. Only the temperature coefficient of remanence alpha_Br is accounted for, since it describes the dependende of the demagnetization curve on the temperature sufficiently for the region "above the knee-point".
+</p>
+<p>
+Additional user-specific materials can be defined as needed.
+</p>
+<pre></PRE><P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetBehaviourS.png" ALT="Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetBehaviour" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetBehaviour"
+>PermanentMagnetBehaviour</A>
+</TD><TD>Relative permeability and temperature-dependent coercivity of permanent magnetic materials</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBS.png" ALT="Modelica_Magnetic.Material.HardMagnetic.NdFeB" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.NdFeB"
+>NdFeB</A>
+</TD><TD>NdFeB sintered; exemplary values</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBS.png" ALT="Modelica_Magnetic.Material.HardMagnetic.Sm2Co17" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.Sm2Co17"
+>Sm2Co17</A>
+</TD><TD>Sm2Co17 sintered, exemplary values</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBS.png" ALT="Modelica_Magnetic.Material.HardMagnetic.SmCo5" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.SmCo5"
+>SmCo5</A>
+</TD><TD>SmCo5 sintered, exemplary values</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBS.png" ALT="Modelica_Magnetic.Material.HardMagnetic.PlasticNdFeB" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PlasticNdFeB"
+>PlasticNdFeB</A>
+</TD><TD>Plastic-bonded NdFeB, exemplary values</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBS.png" ALT="Modelica_Magnetic.Material.HardMagnetic.PlasticSmCo" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PlasticSmCo"
+>PlasticSmCo</A>
+</TD><TD>Plastic-bonded Sm-Co, exemplary values</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBS.png" ALT="Modelica_Magnetic.Material.HardMagnetic.HardFerrite" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.HardFerrite"
+>HardFerrite</A>
+</TD><TD>Hard ferrite sintered, exemplary values</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBS.png" ALT="Modelica_Magnetic.Material.HardMagnetic.PlasticHardFerrite" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PlasticHardFerrite"
+>PlasticHardFerrite</A>
+</TD><TD>Plastic-bonded hard ferrite, exemplary values</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBS.png" ALT="Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData"
+>PermanentMagnetData</A>
+</TD><TD>Record for permanent magnetic material data</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE PermanentMagnetBehaviour<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetBehaviourI.png" ALT="Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetBehaviour" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetBehaviour"></A><A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>Modelica_Magnetic.Material.HardMagnetic</A>.PermanentMagnetBehaviour</H2>
+<B>Relative permeability and temperature-dependent coercivity of permanent magnetic materials</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>HardMagnetic</a> for a description of all elements of this package.
+</p>
+<p>
+In the records defining the characteristics of a permanent magnetic materials, remanence B_rRef and coercivity H_cBRef are given for a reference temperature T_refCelsius, usually 20°C. Using the also defined temperature coefficient of remanence alpha_Br, remanence B_r and coercivity H_cB are calculated for a given operating temperature of the permanent magnet T_opCelsius. In addition, the relative permeability my_r is calculated. Have a look at <A HREF="Modelica_Magnetic_Examples_ElectrodynamicActuator.html#Modelica_Magnetic.Examples.ElectrodynamicActuator.MagneticCircuitModel"
+>Examples.ElectrodynamicActuator.MagneticCircuitModel</a> for an exemplary use of this component.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>CelsiusTemperature</A></TD><TD>T_opCelsius</TD><TD>20</TD><TD>Operating temperature [degC]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> PermanentMagnetBehaviour <font color="darkgreen">
+  &quot;Relative permeability and temperature-dependent coercivity of permanent magnetic materials&quot;</font>
+
+  <font color="blue">replaceable </font><font color="blue">record</font> material =
+    <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData"
+>Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData</A> <font color="darkgreen">
+    &quot;Characteristics of common permanent magnetic materials&quot;</font>;
+
+  <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetBehaviour.material"
+>material</A> mat;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>SI.CelsiusTemperature</A> T_opCelsius = 20 <font color="darkgreen">&quot;Operating temperature&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>SI.MagneticFluxDensity</A> B_r = mat.B_rRef * (1 + mat.alpha_Br *(T_opCelsius - mat.T_refCelsius)) <font color="darkgreen">
+    &quot;Remanence at operating temperature&quot;</font>;
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>SI.MagneticFieldStrength</A> H_cB = mat.H_cBRef * (1 + mat.alpha_Br *(T_opCelsius - mat.T_refCelsius)) <font color="darkgreen">
+    &quot;Coercivity at operating temperature&quot;</font>;
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>SI.RelativePermeability</A> my_r = B_r/ (my_0 * H_cB) <font color="darkgreen">
+    &quot;Relative permeability&quot;</font>;
+
+
+<font color="blue">end </font>PermanentMagnetBehaviour;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE NdFeB<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBI.png" ALT="Modelica_Magnetic.Material.HardMagnetic.NdFeB" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.HardMagnetic.NdFeB"></A><A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>Modelica_Magnetic.Material.HardMagnetic</A>.NdFeB</H2>
+<B>NdFeB sintered; exemplary values</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>HardMagnetic</a> for a description of all permanent magnetic material characteristics of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>MagneticFieldStrength</A></TD><TD>H_cBRef</TD><TD>900000</TD><TD>Coercivity at reference temperature [A/m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_rRef</TD><TD>1.2</TD><TD>Remanence at reference temperature [T]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>CelsiusTemperature</A></TD><TD>T_refCelsius</TD><TD>20</TD><TD>Reference temperature [degC]</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>TemperatureCoefficient</A></TD><TD>alpha_Br</TD><TD>-0.001</TD><TD>Temperature coefficient of remanence [1/K]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> NdFeB =
+  <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData"
+>Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData</A> (
+    H_cBRef=900000,
+    B_rRef=1.2,
+    T_refCelsius=20,
+    alpha_Br=-0.001) <font color="darkgreen">&quot;NdFeB sintered; exemplary values&quot;</font>;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Sm2Co17<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBI.png" ALT="Modelica_Magnetic.Material.HardMagnetic.Sm2Co17" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.HardMagnetic.Sm2Co17"></A><A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>Modelica_Magnetic.Material.HardMagnetic</A>.Sm2Co17</H2>
+<B>Sm2Co17 sintered, exemplary values</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>HardMagnetic</a> for a description of all permanent magnetic material characteristics of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>MagneticFieldStrength</A></TD><TD>H_cBRef</TD><TD>750000</TD><TD>Coercivity at reference temperature [A/m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_rRef</TD><TD>1.02</TD><TD>Remanence at reference temperature [T]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>CelsiusTemperature</A></TD><TD>T_refCelsius</TD><TD>20</TD><TD>Reference temperature [degC]</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>TemperatureCoefficient</A></TD><TD>alpha_Br</TD><TD>-0.0003</TD><TD>Temperature coefficient of remanence [1/K]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> Sm2Co17 =
+  <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData"
+>Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData</A> (
+    H_cBRef=750000,
+    B_rRef=1.02,
+    T_refCelsius=20,
+    alpha_Br=-0.0003) <font color="darkgreen">&quot;Sm2Co17 sintered, exemplary values&quot;</font>;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE SmCo5<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBI.png" ALT="Modelica_Magnetic.Material.HardMagnetic.SmCo5" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.HardMagnetic.SmCo5"></A><A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>Modelica_Magnetic.Material.HardMagnetic</A>.SmCo5</H2>
+<B>SmCo5 sintered, exemplary values</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>HardMagnetic</a> for a description of all permanent magnetic material characteristics of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>MagneticFieldStrength</A></TD><TD>H_cBRef</TD><TD>720000</TD><TD>Coercivity at reference temperature [A/m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_rRef</TD><TD>0.95</TD><TD>Remanence at reference temperature [T]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>CelsiusTemperature</A></TD><TD>T_refCelsius</TD><TD>20</TD><TD>Reference temperature [degC]</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>TemperatureCoefficient</A></TD><TD>alpha_Br</TD><TD>-0.0004</TD><TD>Temperature coefficient of remanence [1/K]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> SmCo5 =
+  <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData"
+>Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData</A> (
+    H_cBRef=720000,
+    B_rRef=0.95,
+    T_refCelsius=20,
+    alpha_Br=-0.0004) <font color="darkgreen">&quot;SmCo5 sintered, exemplary values&quot;</font>;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE PlasticNdFeB<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBI.png" ALT="Modelica_Magnetic.Material.HardMagnetic.PlasticNdFeB" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.HardMagnetic.PlasticNdFeB"></A><A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>Modelica_Magnetic.Material.HardMagnetic</A>.PlasticNdFeB</H2>
+<B>Plastic-bonded NdFeB, exemplary values</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>HardMagnetic</a> for a description of all permanent magnetic material characteristics of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>MagneticFieldStrength</A></TD><TD>H_cBRef</TD><TD>400000</TD><TD>Coercivity at reference temperature [A/m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_rRef</TD><TD>0.6</TD><TD>Remanence at reference temperature [T]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>CelsiusTemperature</A></TD><TD>T_refCelsius</TD><TD>20</TD><TD>Reference temperature [degC]</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>TemperatureCoefficient</A></TD><TD>alpha_Br</TD><TD>-0.001</TD><TD>Temperature coefficient of remanence [1/K]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> PlasticNdFeB =
+  <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData"
+>Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData</A> (
+    H_cBRef=400000,
+    B_rRef=0.6,
+    T_refCelsius=20,
+    alpha_Br=-0.001) <font color="darkgreen">&quot;Plastic-bonded NdFeB, exemplary values&quot;</font>;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE PlasticSmCo<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBI.png" ALT="Modelica_Magnetic.Material.HardMagnetic.PlasticSmCo" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.HardMagnetic.PlasticSmCo"></A><A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>Modelica_Magnetic.Material.HardMagnetic</A>.PlasticSmCo</H2>
+<B>Plastic-bonded Sm-Co, exemplary values</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>HardMagnetic</a> for a description of all permanent magnetic material characteristics of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>MagneticFieldStrength</A></TD><TD>H_cBRef</TD><TD>385000</TD><TD>Coercivity at reference temperature [A/m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_rRef</TD><TD>0.57</TD><TD>Remanence at reference temperature [T]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>CelsiusTemperature</A></TD><TD>T_refCelsius</TD><TD>20</TD><TD>Reference temperature [degC]</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>TemperatureCoefficient</A></TD><TD>alpha_Br</TD><TD>-0.0004</TD><TD>Temperature coefficient of remanence [1/K]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> PlasticSmCo =
+  <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData"
+>Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData</A> (
+    H_cBRef=385000,
+    B_rRef=0.57,
+    T_refCelsius=20,
+    alpha_Br=-0.0004) <font color="darkgreen">&quot;Plastic-bonded Sm-Co, exemplary values&quot;</font>;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE HardFerrite<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBI.png" ALT="Modelica_Magnetic.Material.HardMagnetic.HardFerrite" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.HardMagnetic.HardFerrite"></A><A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>Modelica_Magnetic.Material.HardMagnetic</A>.HardFerrite</H2>
+<B>Hard ferrite sintered, exemplary values</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>HardMagnetic</a> for a description of all permanent magnetic material characteristics of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>MagneticFieldStrength</A></TD><TD>H_cBRef</TD><TD>170000</TD><TD>Coercivity at reference temperature [A/m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_rRef</TD><TD>0.38</TD><TD>Remanence at reference temperature [T]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>CelsiusTemperature</A></TD><TD>T_refCelsius</TD><TD>20</TD><TD>Reference temperature [degC]</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>TemperatureCoefficient</A></TD><TD>alpha_Br</TD><TD>-0.002</TD><TD>Temperature coefficient of remanence [1/K]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> HardFerrite =
+  <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData"
+>Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData</A> (
+    H_cBRef=170000,
+    B_rRef=0.38,
+    T_refCelsius=20,
+    alpha_Br=-0.002) <font color="darkgreen">&quot;Hard ferrite sintered, exemplary values&quot;</font>;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE PlasticHardFerrite<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBI.png" ALT="Modelica_Magnetic.Material.HardMagnetic.PlasticHardFerrite" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.HardMagnetic.PlasticHardFerrite"></A><A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>Modelica_Magnetic.Material.HardMagnetic</A>.PlasticHardFerrite</H2>
+<B>Plastic-bonded hard ferrite, exemplary values</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>HardMagnetic</a> for a description of all permanent magnetic material characteristics of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>MagneticFieldStrength</A></TD><TD>H_cBRef</TD><TD>130000</TD><TD>Coercivity at reference temperature [A/m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_rRef</TD><TD>0.21</TD><TD>Remanence at reference temperature [T]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>CelsiusTemperature</A></TD><TD>T_refCelsius</TD><TD>20</TD><TD>Reference temperature [degC]</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>TemperatureCoefficient</A></TD><TD>alpha_Br</TD><TD>-0.002</TD><TD>Temperature coefficient of remanence [1/K]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> PlasticHardFerrite =
+  <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData"
+>Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData</A> (
+    H_cBRef=130000,
+    B_rRef=0.21,
+    T_refCelsius=20,
+    alpha_Br=-0.002) <font color="darkgreen">&quot;Plastic-bonded hard ferrite, exemplary values&quot;</font>;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE PermanentMagnetData<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBI.png" ALT="Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData"></A><A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>Modelica_Magnetic.Material.HardMagnetic</A>.PermanentMagnetData</H2>
+<B>Record for permanent magnetic material data</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing package <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic"
+>HardMagnetic</a> for a description of all permanent magnetic material characteristics of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>MagneticFieldStrength</A></TD><TD>H_cBRef</TD><TD>1</TD><TD>Coercivity at reference temperature [A/m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_rRef</TD><TD>1</TD><TD>Remanence at reference temperature [T]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>CelsiusTemperature</A></TD><TD>T_refCelsius</TD><TD>20</TD><TD>Reference temperature [degC]</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>TemperatureCoefficient</A></TD><TD>alpha_Br</TD><TD>0</TD><TD>Temperature coefficient of remanence [1/K]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">record</font> PermanentMagnetData <font color="darkgreen">
+  &quot;Record for permanent magnetic material data&quot;</font>
+  <font color="blue">extends </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Icons.html#Modelica.Icons.Record"
+>Modelica.Icons.Record</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>SI.MagneticFieldStrength</A> H_cBRef = 1 <font color="darkgreen">
+    &quot;Coercivity at reference temperature&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>SI.MagneticFluxDensity</A> B_rRef = 1 <font color="darkgreen">
+    &quot;Remanence at reference temperature&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>SI.CelsiusTemperature</A> T_refCelsius = 20 <font color="darkgreen">&quot;Reference temperature&quot;</font>;
+  <font color="blue">parameter </font><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>Utilities.TemperatureCoefficient</A> alpha_Br = 0 <font color="darkgreen">
+    &quot;Temperature coefficient of remanence&quot;</font>;
+
+<font color="blue">end </font>PermanentMagnetData;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE material<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Material.HardMagnetic.NdFeBI.png" ALT="Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetBehaviour.material" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetBehaviour.material"></A><A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetBehaviour"
+>Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetBehaviour</A>.material</H2>
+<B>Characteristics of common permanent magnetic materials</B><p>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFieldStrength"
+>MagneticFieldStrength</A></TD><TD>H_cBRef</TD><TD>1</TD><TD>Coercivity at reference temperature [A/m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_rRef</TD><TD>1</TD><TD>Remanence at reference temperature [T]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>CelsiusTemperature</A></TD><TD>T_refCelsius</TD><TD>20</TD><TD>Reference temperature [degC]</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>TemperatureCoefficient</A></TD><TD>alpha_Br</TD><TD>0</TD><TD>Temperature coefficient of remanence [1/K]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">replaceable </font><font color="blue">record</font> material =
+  <A HREF="Modelica_Magnetic_Material_HardMagnetic.html#Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData"
+>Modelica_Magnetic.Material.HardMagnetic.PermanentMagnetData</A> <font color="darkgreen">
+  &quot;Characteristics of common permanent magnetic materials&quot;</font>;
+</PRE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Oct 11 17:08:26 2007.
+</address></BODY>
+</HTML>

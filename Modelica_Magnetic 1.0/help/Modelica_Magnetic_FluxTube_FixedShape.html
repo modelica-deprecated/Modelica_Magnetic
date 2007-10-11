@@ -1,0 +1,353 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica_Magnetic.FluxTube.FixedShape</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Flux tubes with fixed shape during simulation and linear or nonlinear material characteristics&quot;">
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE FixedShape<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.FluxTube.FixedShape"></A><A HREF="Modelica_Magnetic_FluxTube.html#Modelica_Magnetic.FluxTube"
+>Modelica_Magnetic.FluxTube</A>.FixedShape</H2>
+<B>Flux tubes with fixed shape during simulation and linear or nonlinear material characteristics</B>
+<P>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please have a look at <A HREF="Modelica_Magnetic_UsersGuide.html#Modelica_Magnetic.UsersGuide.ReluctanceForceCalculation"
+>Reluctance forces</a> in the Users Guide for an explanation of the different flux tube categories and resulting sub-packages.
+</p>
+<p>
+Due to the restrictions on reluctance force calculation outlined there, flux tube elements with a possibly nonlinear material characteristic my_r(B) must have a fixed shape during simulation of actuator motion. Hence, the dimensions of these flux tubes are defined as parameters in the model components that extend the base class <A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape"
+>PartialFixedShape</a>.  </p>
+<p>
+For initial design of magnetic circuits, the relative permeability of possibly nonlinear flux tube elements can easily be set to a constant value my_rConst (nonLinearPermeability set to false). In some cases, this can simplify the rough geometric design of a device's magnetic circuit. Once an initial geometry is found, the magnetic subsystem can be simulated and fine-tuned with more realistic non-linear characteristics of ferromagnetic materials. Doing so requires setting of the parameter nonLinearPermeability to true and selection of one of the soft magnetic materials of <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic"
+>Material.SoftMagnetic</a>.
+</p>
+<pre></PRE><P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.ConstantReluctanceS.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape"
+>PartialFixedShape</A>
+</TD><TD>Base class for flux tubes with fixed shape during simulation; linear or nonlinear material characteristics</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.ConstantReluctanceS.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.HollowCylinderAxialFlux" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape.HollowCylinderAxialFlux"
+>HollowCylinderAxialFlux</A>
+</TD><TD>(Hollow) cylinder with axial flux; fixed shape; linear or nonlinear material characteristics</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.ConstantReluctanceS.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.HollowCylinderRadialFlux" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape.HollowCylinderRadialFlux"
+>HollowCylinderRadialFlux</A>
+</TD><TD>Hollow cylinder with radial flux; fixed shape; linear or nonlinear material characteristics</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.ConstantReluctanceS.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.Cuboid" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape.Cuboid"
+>Cuboid</A>
+</TD><TD>Flux tube with rectangular cross-section; fixed shape; linear or nonlinear material characteristics</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE PartialFixedShape<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShapeI.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape"></A><A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape"
+>Modelica_Magnetic.FluxTube.FixedShape</A>.PartialFixedShape</H2>
+<B>Base class for flux tubes with fixed shape during simulation; linear or nonlinear material characteristics</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.ConstantReluctanceD.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape"
+>FixedShape</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR bgcolor="#e0e0e0"><TD colspan=4>Material</TD></TR>
+<TR><TD>Boolean</TD><TD>nonLinearPermeability</TD><TD>true</TD><TD>= true, if non-linear rel. permeability is used, otherwise constant rel. permeability</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>RelativePermeability</A></TD><TD>my_rConst</TD><TD>1</TD><TD>Constant relative permeability; used if nonLinearPermeability = false [1]</TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">partial </font><font color="blue">model</font> PartialFixedShape <font color="darkgreen">
+  &quot;Base class for flux tubes with fixed shape during simulation; linear or nonlinear material characteristics&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.TwoPortComponent"
+>Modelica_Magnetic.Interfaces.TwoPortComponent</A>;
+
+  <font color="blue">parameter </font>Boolean nonLinearPermeability = true <font color="darkgreen">
+    &quot;= true, if non-linear rel. permeability is used, otherwise constant rel. permeability&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>SI.RelativePermeability</A> my_rConst = 1 <font color="darkgreen">
+    &quot;Constant relative permeability; used if nonLinearPermeability = false&quot;</font>;
+
+  <font color="blue">replaceable </font><font color="blue">record</font> Material =
+    <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic.ApproximationData"
+>Modelica_Magnetic.Material.SoftMagnetic.ApproximationData</A> <font color="darkgreen">
+    &quot;Ferromagnetic material characteristics; used if nonLinearPermeability = true&quot;</font>;
+
+  <A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape.Material"
+>Material</A> mat;
+
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Reluctance"
+>SI.Reluctance</A> R_m <font color="darkgreen">&quot;Magnetic reluctance&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Permeance"
+>SI.Permeance</A> G_m <font color="darkgreen">&quot;Magnetic permeance&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>SI.MagneticFluxDensity</A> B <font color="darkgreen">&quot;Magnetic flux density&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CrossSection"
+>SI.CrossSection</A> A <font color="darkgreen">&quot;Cross-sectional area penetrated by magnetic flux&quot;</font>;
+
+    <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>SI.RelativePermeability</A> my_r <font color="darkgreen">&quot;Relative magnetic permeability&quot;</font>;
+
+<font color="blue">equation </font>
+  my_r = <font color="blue">if </font>nonLinearPermeability<font color="blue"> then </font>
+    <font color="red">Modelica_Magnetic.Material.SoftMagnetic.my_rApprox</font>(
+          B,
+          mat.my_i,
+          mat.B_myMax,
+          mat.c_a,
+          mat.c_b,
+          mat.n)<font color="blue"> else </font>my_rConst;
+  R_m = 1/G_m;
+  V_mag = Phi * R_m;
+  B = Phi/A;
+
+<font color="blue">end </font>PartialFixedShape;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE HollowCylinderAxialFlux<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShapeI.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.HollowCylinderAxialFlux" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.FixedShape.HollowCylinderAxialFlux"></A><A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape"
+>Modelica_Magnetic.FluxTube.FixedShape</A>.HollowCylinderAxialFlux</H2>
+<B>(Hollow) cylinder with axial flux; fixed shape; linear or nonlinear material characteristics</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.ConstantReluctanceD.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.HollowCylinderAxialFlux">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape"
+>FixedShape</a> for a description of all elements of this package.
+</p>
+<p>
+Set the inner radius r_i=0 for modelling of a solid cylindric flux tube.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR bgcolor="#e0e0e0"><TD colspan=4>Material</TD></TR>
+<TR><TD>Boolean</TD><TD>nonLinearPermeability</TD><TD>true</TD><TD>= true, if non-linear rel. permeability is used, otherwise constant rel. permeability</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>RelativePermeability</A></TD><TD>my_rConst</TD><TD>1</TD><TD>Constant relative permeability; used if nonLinearPermeability = false [1]</TD></TR>
+<TR><TD colspan="2">replaceable record Material</TD><TD><A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic.ApproximationData"
+>ApproximationData</A></TD><TD>Ferromagnetic material characteristics; used if nonLinearPermeability = true</TD></TR>
+<TR bgcolor="#e0e0e0"><TD colspan=4>Fixed geometry</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</A></TD><TD>l</TD><TD>0.01</TD><TD>Axial length (in direction of flux) [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>Radius</A></TD><TD>r_i</TD><TD>0</TD><TD>Inner radius of hollow cylinder (zero for cylinder) [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>Radius</A></TD><TD>r_o</TD><TD>0.01</TD><TD>Outer radius of (hollow) cylinder [m]</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/HollowCylinderAxialFlux.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> HollowCylinderAxialFlux <font color="darkgreen">
+  &quot;(Hollow) cylinder with axial flux; fixed shape; linear or nonlinear material characteristics&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape"
+>Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>SI.Length</A> l = 0.01 <font color="darkgreen">&quot;Axial length (in direction of flux)&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>SI.Radius</A> r_i = 0 <font color="darkgreen">
+    &quot;Inner radius of hollow cylinder (zero for cylinder)&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>SI.Radius</A> r_o = 0.01 <font color="darkgreen">&quot;Outer radius of (hollow) cylinder&quot;</font>;
+
+<font color="blue">equation </font>
+  A = pi*(r_o^2 - r_i^2);
+  G_m = (my_0 * my_r * A)/ l;
+
+<font color="blue">end </font>HollowCylinderAxialFlux;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE HollowCylinderRadialFlux<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShapeI.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.HollowCylinderRadialFlux" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.FixedShape.HollowCylinderRadialFlux"></A><A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape"
+>Modelica_Magnetic.FluxTube.FixedShape</A>.HollowCylinderRadialFlux</H2>
+<B>Hollow cylinder with radial flux; fixed shape; linear or nonlinear material characteristics</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.ConstantReluctanceD.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.HollowCylinderRadialFlux">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape"
+>FixedShape</a> for a description of all elements of this package.
+</p>
+<p>
+For hollow cylindric flux tubes with a radial magnetic flux, the flux density is a function of the radius. For that reason, the characteristic my_r(B) is evaluated for the flux density at the flux tube's mean radius. </p>
+<p>
+For those flux tube sections of a magnetic device that have a nonlinear material characteristic my_r(B) and a large aspect ratio of outer to inner radius r_o/r_i, the section can be split up in a series connection of several hollow cylindric flux tubes with radial flux. This allows for more realistic modelling of the dependence of flux density on the radius compared to modelling with just one flux tube element.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR bgcolor="#e0e0e0"><TD colspan=4>Material</TD></TR>
+<TR><TD>Boolean</TD><TD>nonLinearPermeability</TD><TD>true</TD><TD>= true, if non-linear rel. permeability is used, otherwise constant rel. permeability</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>RelativePermeability</A></TD><TD>my_rConst</TD><TD>1</TD><TD>Constant relative permeability; used if nonLinearPermeability = false [1]</TD></TR>
+<TR><TD colspan="2">replaceable record Material</TD><TD><A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic.ApproximationData"
+>ApproximationData</A></TD><TD>Ferromagnetic material characteristics; used if nonLinearPermeability = true</TD></TR>
+<TR bgcolor="#e0e0e0"><TD colspan=4>Fixed geometry</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Breadth"
+>Breadth</A></TD><TD>b</TD><TD>0.01</TD><TD>Breadth (orthogonal to flux direction) [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>Radius</A></TD><TD>r_i</TD><TD>0.01</TD><TD>Inner radius of hollow cylinder [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>Radius</A></TD><TD>r_o</TD><TD>0.02</TD><TD>Outer radius of hollow cylinder [m]</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/HollowCylinderRadialFlux_fixedShape.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> HollowCylinderRadialFlux <font color="darkgreen">
+  &quot;Hollow cylinder with radial flux; fixed shape; linear or nonlinear material characteristics&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape"
+>Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Breadth"
+>SI.Breadth</A> b = 0.01 <font color="darkgreen">&quot;Breadth (orthogonal to flux direction)&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>SI.Radius</A> r_i = 0.01 <font color="darkgreen">&quot;Inner radius of hollow cylinder&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Radius"
+>SI.Radius</A> r_o = 0.02 <font color="darkgreen">&quot;Outer radius of hollow cylinder&quot;</font>;
+
+<font color="blue">equation </font>
+  A = b * pi*(r_o + r_i);<font color="darkgreen"> //Area at arithmetic mean radius for calculation of average flux density</font>
+  G_m = 2* pi* my_0* my_r* b/<font color="red"> Modelica.Math.log</font>(r_o/r_i);
+
+<font color="blue">end </font>HollowCylinderRadialFlux;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Cuboid<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShapeI.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.Cuboid" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.FixedShape.Cuboid"></A><A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape"
+>Modelica_Magnetic.FluxTube.FixedShape</A>.Cuboid</H2>
+<B>Flux tube with rectangular cross-section; fixed shape; linear or nonlinear material characteristics</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.ConstantReluctanceD.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.Cuboid">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please refer to the description of  the enclosing sub-package <A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape"
+>FixedShape</a> for a description of all elements of this package.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR bgcolor="#e0e0e0"><TD colspan=4>Material</TD></TR>
+<TR><TD>Boolean</TD><TD>nonLinearPermeability</TD><TD>true</TD><TD>= true, if non-linear rel. permeability is used, otherwise constant rel. permeability</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>RelativePermeability</A></TD><TD>my_rConst</TD><TD>1</TD><TD>Constant relative permeability; used if nonLinearPermeability = false [1]</TD></TR>
+<TR><TD colspan="2">replaceable record Material</TD><TD><A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic.ApproximationData"
+>ApproximationData</A></TD><TD>Ferromagnetic material characteristics; used if nonLinearPermeability = true</TD></TR>
+<TR bgcolor="#e0e0e0"><TD colspan=4>Fixed geometry</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</A></TD><TD>l</TD><TD>0.01</TD><TD>Length in direction of flux [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Breadth"
+>Breadth</A></TD><TD>a</TD><TD>0.01</TD><TD>Breadth of rectangular cross-section [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Height"
+>Height</A></TD><TD>b</TD><TD>0.01</TD><TD>Height of rectangular cross-section [m]</TD></TR>
+<TR><TD colspan=4><IMG SRC="../Images/Magnetic/FluxTube/CuboidParallelFlux.png"></TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> Cuboid <font color="darkgreen">
+  &quot;Flux tube with rectangular cross-section; fixed shape; linear or nonlinear material characteristics&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape"
+>Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>SI.Length</A> l = 0.01 <font color="darkgreen">&quot;Length in direction of flux&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Breadth"
+>SI.Breadth</A> a = 0.01 <font color="darkgreen">&quot;Breadth of rectangular cross-section&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Height"
+>SI.Height</A> b = 0.01 <font color="darkgreen">&quot;Height of rectangular cross-section&quot;</font>;
+
+<font color="blue">equation </font>
+  A = a * b;
+  G_m = (my_0 * my_r * A)/ l;
+
+<font color="blue">end </font>Cuboid;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Material<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape.MaterialI.png" ALT="Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape.Material" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape.Material"></A><A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape"
+>Modelica_Magnetic.FluxTube.FixedShape.PartialFixedShape</A>.Material</H2>
+<B>Ferromagnetic material characteristics; used if nonLinearPermeability = true</B><p>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.RelativePermeability"
+>RelativePermeability</A></TD><TD>my_i</TD><TD>1</TD><TD>Initial relative permeability at B=0 [1]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFluxDensity"
+>MagneticFluxDensity</A></TD><TD>B_myMax</TD><TD>1</TD><TD>Flux density at maximum relative permeability [T]</TD></TR>
+<TR><TD>Real</TD><TD>c_a</TD><TD>1</TD><TD>Coefficient of approximation function</TD></TR>
+<TR><TD>Real</TD><TD>c_b</TD><TD>1</TD><TD>Coefficient of approximation function</TD></TR>
+<TR><TD>Real</TD><TD>n</TD><TD>1</TD><TD>Exponent of approximation function</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">replaceable </font><font color="blue">record</font> Material =
+  <A HREF="Modelica_Magnetic_Material_SoftMagnetic.html#Modelica_Magnetic.Material.SoftMagnetic.ApproximationData"
+>Modelica_Magnetic.Material.SoftMagnetic.ApproximationData</A> <font color="darkgreen">
+  &quot;Ferromagnetic material characteristics; used if nonLinearPermeability = true&quot;</font>;
+</PRE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Oct 11 17:08:25 2007.
+</address></BODY>
+</HTML>

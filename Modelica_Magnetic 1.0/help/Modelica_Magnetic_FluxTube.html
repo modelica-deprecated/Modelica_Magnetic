@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica_Magnetic.FluxTube</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Lumped elements representing flux tubes of different shapes&quot;">
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE FluxTube<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.FluxTube"></A><A HREF="Modelica_Magnetic.html#Modelica_Magnetic"
+>Modelica_Magnetic</A>.FluxTube</H2>
+<B>Lumped elements representing flux tubes of different shapes</B>
+<P>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Please have a look at <A HREF="Modelica_Magnetic_UsersGuide.html#Modelica_Magnetic.UsersGuide.FluxTubeConcept"
+>Flux tube concept</a> and <A HREF="Modelica_Magnetic_UsersGuide.html#Modelica_Magnetic.UsersGuide.ReluctanceForceCalculation"
+>Reluctance forces</a> in the Users Guide for comments on the underlying concept, on the calculation of reluctance forces from lumped magnetic network models and on the thereof resulting flux tube categories and sub-packages.
+</p>
+<p>
+Although either the magnetic reluctance <i>R<sub>m</sub></i> or its reciprocal, the magnetic permeance <i>G<sub>m</sub></i> both represent geometric and material properties of a flux tube, both quantities are computed for each flux tube of this package. This enables for convenient calculation of the net reluctance or net permeance of a magnetic circuit, e.g. for calculation of a device's inductance. In case of a parallel connection of flux tube elements, the individual permeances sum up to the net permeance. For a series connection of flux tube elements, the individual reluctances sum up to the net reluctance.
+</p>
+<pre></PRE><P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.FixedShapeS.png" ALT="Modelica_Magnetic.FluxTube.FixedShape" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_FixedShape.html#Modelica_Magnetic.FluxTube.FixedShape"
+>FixedShape</A>
+</TD><TD>Flux tubes with fixed shape during simulation and linear or nonlinear material characteristics</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.FixedShapeS.png" ALT="Modelica_Magnetic.FluxTube.Force" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Force.html#Modelica_Magnetic.FluxTube.Force"
+>Force</A>
+</TD><TD>Flux tubes with reluctance force generation; constant permeability</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.FixedShapeS.png" ALT="Modelica_Magnetic.FluxTube.Leakage" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube_Leakage.html#Modelica_Magnetic.FluxTube.Leakage"
+>Leakage</A>
+</TD><TD>Leakage flux tubes with position-independent permeance and hence no force generation; my_r=1</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.FluxTube.ConstantReluctanceS.png" ALT="Modelica_Magnetic.FluxTube.ConstantReluctance" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_FluxTube.html#Modelica_Magnetic.FluxTube.ConstantReluctance"
+>ConstantReluctance</A>
+</TD><TD>Constant reluctance</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE ConstantReluctance<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.FluxTube.ConstantReluctanceI.png" ALT="Modelica_Magnetic.FluxTube.ConstantReluctance" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.FluxTube.ConstantReluctance"></A><A HREF="Modelica_Magnetic_FluxTube.html#Modelica_Magnetic.FluxTube"
+>Modelica_Magnetic.FluxTube</A>.ConstantReluctance</H2>
+<B>Constant reluctance</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.ConstantReluctanceD.png" ALT="Modelica_Magnetic.FluxTube.ConstantReluctance">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+This constant reluctance is provided for test purposes and simple magnetic network models. The reluctance is not calculated from geometry and permeability of a flux tube, but is provided as a parameter.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Reluctance"
+>Reluctance</A></TD><TD>R_m</TD><TD>1</TD><TD>Magnetic reluctance [H-1]</TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> ConstantReluctance <font color="darkgreen">&quot;Constant reluctance&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.TwoPortComponent"
+>Modelica_Magnetic.Interfaces.TwoPortComponent</A>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Reluctance"
+>SI.Reluctance</A> R_m = 1 <font color="darkgreen">&quot;Magnetic reluctance&quot;</font>;
+
+
+<font color="blue">equation </font>
+  V_mag = Phi * R_m;
+
+<font color="blue">end </font>ConstantReluctance;
+</PRE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Oct 11 17:08:24 2007.
+</address></BODY>
+</HTML>

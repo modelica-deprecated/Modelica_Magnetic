@@ -1,0 +1,215 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica_Magnetic.Utilities</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Miscellaneous model components for modelling of actuators&quot;">
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Utilities<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.Utilities"></A><A HREF="Modelica_Magnetic.html#Modelica_Magnetic"
+>Modelica_Magnetic</A>.Utilities</H2>
+<B>Miscellaneous model components for modelling of actuators</B>
+<P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>TemperatureCoefficient</A>
+</TD><TD>&nbsp;</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Utilities.TranslatoryStopperS.png" ALT="Modelica_Magnetic.Utilities.TranslatoryStopper" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TranslatoryStopper"
+>TranslatoryStopper</A>
+</TD><TD>Translatory, nonlinear spring/damper combination with free travel for modelling of impact, e.g. at a stopper</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Utilities.TranslatoryArmatureS.png" ALT="Modelica_Magnetic.Utilities.TranslatoryArmature" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TranslatoryArmature"
+>TranslatoryArmature</A>
+</TD><TD>Mass with free travel between two stoppers</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Utilities.VariableGainS.png" ALT="Modelica_Magnetic.Utilities.VariableGain" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.VariableGain"
+>VariableGain</A>
+</TD><TD>Gain block with variable gain</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE TemperatureCoefficient<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.Utilities.TemperatureCoefficient"></A><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities"
+>Modelica_Magnetic.Utilities</A>.TemperatureCoefficient</H2>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">type</font> TemperatureCoefficient = Real (<font color="blue">final </font>quantity=&quot;TemperatureCoefficient&quot;, <font color="blue">final </font>unit
+      =                                                                                 &quot;1/K&quot;);
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE TranslatoryStopper<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Utilities.TranslatoryStopperI.png" ALT="Modelica_Magnetic.Utilities.TranslatoryStopper" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Utilities.TranslatoryStopper"></A><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities"
+>Modelica_Magnetic.Utilities</A>.TranslatoryStopper</H2>
+<B>Translatory, nonlinear spring/damper combination with free travel for modelling of impact, e.g. at a stopper</B><p>
+<IMG SRC="Modelica_Magnetic.Utilities.TranslatoryStopperD.png" ALT="Modelica_Magnetic.Utilities.TranslatoryStopper">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+This component is intended for modelling of impact between a stopper and a freely travelling translatory mass. It is similar to <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Mechanics_Translational.html#Modelica.Mechanics.Translational.ElastoGap"
+>Modelica.Mechanics.Translational.ElastoGap</a>, but the force during contact of the impact partners is calculated differently. Kinetic energy is dissipated in a damper only during collision of the two impact partners, but not if they move away from each other. Also, as penetration depth increases, the force increases non-linearly.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD>Real</TD><TD>c</TD><TD>1e6</TD><TD>Spring stiffness between impact partners [N/m]</TD></TR>
+<TR><TD>Real</TD><TD>d</TD><TD>2e2</TD><TD>Damping coefficient between impact partners [N/ (m/s)]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</A></TD><TD>s_n</TD><TD>1e-5</TD><TD>Normalized penetration depth of impact partners [m]</TD></TR>
+<TR><TD>Real</TD><TD>n</TD><TD>1</TD><TD>Exponent for force function (n &gt;= 1)</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">class</font> TranslatoryStopper <font color="darkgreen">
+  &quot;Translatory, nonlinear spring/damper combination with free travel for modelling of impact, e.g. at a stopper&quot;</font>
+
+  <font color="blue">extends </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Mechanics_Translational_Interfaces.html#Modelica.Mechanics.Translational.Interfaces.Compliant"
+>Modelica.Mechanics.Translational.Interfaces.Compliant</A>;
+  <font color="blue">parameter </font>Real c(
+    <font color="blue">final </font>unit=&quot;N/m&quot;,
+    <font color="blue">final </font>min=0) = 1e6 <font color="darkgreen">&quot;Spring stiffness between impact partners&quot;</font>;
+  <font color="blue">parameter </font>Real d(
+    <font color="blue">final </font>unit=&quot;N/ (m/s)&quot;,
+    <font color="blue">final </font>min=0) = 2e2 <font color="darkgreen">&quot;Damping coefficient between impact partners&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Velocity"
+>SI.Velocity</A> v_rel <font color="darkgreen">&quot;Relative velocity between impact partners&quot;</font>;
+  Boolean Contact <font color="darkgreen">&quot;False, if s_rel &gt; 0&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>SI.Length</A> s_n=1e-5 <font color="darkgreen">
+    &quot;Normalized penetration depth of impact partners&quot;</font>;
+  <font color="blue">parameter </font>Real n=1 <font color="darkgreen">&quot;Exponent for force function (n &gt;= 1)&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Velocity"
+>SI.Velocity</A> delta_v <font color="darkgreen">&quot;Relative velocity&quot;</font>;
+<font color="blue">equation </font>
+
+  v_rel =<font color="red"> der</font>(s_rel);
+  Contact = s_rel &lt; 0;
+  delta_v = <font color="blue">if </font>(v_rel &lt; 0)<font color="blue"> then </font>v_rel<font color="blue"> else </font>0;
+  f = <font color="blue">if </font>Contact<font color="blue"> then </font>(c*s_rel + d*delta_v) * (<font color="red">abs</font>(s_rel)/s_n)^n<font color="blue"> else </font>0;
+<font color="blue">end </font>TranslatoryStopper;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE TranslatoryArmature<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Utilities.TranslatoryArmatureI.png" ALT="Modelica_Magnetic.Utilities.TranslatoryArmature" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Utilities.TranslatoryArmature"></A><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities"
+>Modelica_Magnetic.Utilities</A>.TranslatoryArmature</H2>
+<B>Mass with free travel between two stoppers</B><p>
+<IMG SRC="Modelica_Magnetic.Utilities.TranslatoryArmatureD.png" ALT="Modelica_Magnetic.Utilities.TranslatoryArmature">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+In translatory actuators with limited stroke, the armature with its inertia can travel between two stoppers.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Mass</A></TD><TD>m</TD><TD>1</TD><TD>Armature mass [kg]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</A></TD><TD>x_max</TD><TD>10e-3</TD><TD>Position of stopper at maximum armature position [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</A></TD><TD>x_min</TD><TD>0</TD><TD>Position of stopper at minimum armature position [m]</TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Mechanics_Translational_Interfaces.html#Modelica.Mechanics.Translational.Interfaces.Flange_a"
+>Flange_a</A></TD><TD>flange_a</TD><TD>&nbsp;</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Mechanics_Translational_Interfaces.html#Modelica.Mechanics.Translational.Interfaces.Flange_b"
+>Flange_b</A></TD><TD>flange_b</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> TranslatoryArmature <font color="darkgreen">
+  &quot;Mass with free travel between two stoppers&quot;</font>
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>SI.Mass</A> m=1 <font color="darkgreen">&quot;Armature mass&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>SI.Position</A> x_max=10e-3 <font color="darkgreen">
+    &quot;Position of stopper at maximum armature position&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>SI.Position</A> x_min=0 <font color="darkgreen">
+    &quot;Position of stopper at minimum armature position&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Mechanics_Translational.html#Modelica.Mechanics.Translational.SlidingMass"
+>Modelica.Mechanics.Translational.SlidingMass</A> mass(m=m);
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Mechanics_Translational_Interfaces.html#Modelica.Mechanics.Translational.Interfaces.Flange_a"
+>Modelica.Mechanics.Translational.Interfaces.Flange_a</A> flange_a;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Mechanics_Translational_Interfaces.html#Modelica.Mechanics.Translational.Interfaces.Flange_b"
+>Modelica.Mechanics.Translational.Interfaces.Flange_b</A> flange_b;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Mechanics_Translational.html#Modelica.Mechanics.Translational.Fixed"
+>Modelica.Mechanics.Translational.Fixed</A> limit_xMin(s0=x_min);
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Mechanics_Translational.html#Modelica.Mechanics.Translational.Fixed"
+>Modelica.Mechanics.Translational.Fixed</A> limit_xMax(s0=x_max);
+  <A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TranslatoryStopper"
+>Modelica_Magnetic.Utilities.TranslatoryStopper</A> stopper_xMax;
+  <A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TranslatoryStopper"
+>Modelica_Magnetic.Utilities.TranslatoryStopper</A> stopper_xMin;
+
+<font color="blue">equation </font>
+  <font color="red">connect</font>(mass.flange_a, stopper_xMin.flange_b);
+  <font color="red">connect</font>(limit_xMax.flange_b,stopper_xMax. flange_b);
+  <font color="red">connect</font>(stopper_xMax.flange_a, mass.flange_b);
+  <font color="red">connect</font>(mass.flange_a, flange_a);
+  <font color="red">connect</font>(limit_xMin.flange_b, stopper_xMin.flange_a);
+  <font color="red">connect</font>(flange_b, mass.flange_b);
+<font color="blue">end </font>TranslatoryArmature;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE VariableGain<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Utilities.VariableGainI.png" ALT="Modelica_Magnetic.Utilities.VariableGain" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Utilities.VariableGain"></A><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities"
+>Modelica_Magnetic.Utilities</A>.VariableGain</H2>
+<B>Gain block with variable gain</B><p>
+<IMG SRC="Modelica_Magnetic.Utilities.VariableGainD.png" ALT="Modelica_Magnetic.Utilities.VariableGain">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+This component is similar to <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Math.html#Modelica.Blocks.Math.Gain"
+>Modelica.Blocks.Math.Gain</a>. However, gain <i>k</i> is not a parameter here and thus has a higher variability. The output <i>y</i> is computed as product of gain <i>k</i> and input <i>u</i>:
+<pre>
+    y = k * u;
+</pre>
+</p>
+<pre>
+</PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>input <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</A></TD><TD>u</TD><TD>Input signal connector</TD></TR>
+<TR><TD>output <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</A></TD><TD>y</TD><TD>Output signal connector</TD></TR>
+<TR><TD>input <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</A></TD><TD>k</TD><TD>Variable gain</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">block</font> VariableGain <font color="darkgreen">&quot;Gain block with variable gain&quot;</font>
+
+<font color="blue">public </font>
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</A> u <font color="darkgreen">&quot;Input signal connector&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</A> y <font color="darkgreen">&quot;Output signal connector&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</A> k <font color="darkgreen">&quot;Variable gain&quot;</font>;
+<font color="blue">equation </font>
+  y = k*u;
+<font color="blue">end </font>VariableGain;
+</PRE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Oct 11 17:08:26 2007.
+</address></BODY>
+</HTML>

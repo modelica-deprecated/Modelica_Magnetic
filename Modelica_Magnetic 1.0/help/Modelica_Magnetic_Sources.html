@@ -1,0 +1,459 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica_Magnetic.Sources</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Sources of different complexity of magnetomotive force and magnetic flux&quot;">
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Sources<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.Sources"></A><A HREF="Modelica_Magnetic.html#Modelica_Magnetic"
+>Modelica_Magnetic</A>.Sources</H2>
+<B>Sources of different complexity of magnetomotive force and magnetic flux</B>
+<P>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+This package contains sources of magnetic potential difference:
+</p>
+<pre></PRE><P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Sources.ConstantMMFS.png" ALT="Modelica_Magnetic.Sources.ConstantMMF" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources.ConstantMMF"
+>ConstantMMF</A>
+</TD><TD>Constant magnetomotive force</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Sources.SignalMMFS.png" ALT="Modelica_Magnetic.Sources.SignalMMF" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources.SignalMMF"
+>SignalMMF</A>
+</TD><TD>Signal-controlled magnetomotive force</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Sources.ElectroMagneticConverterS.png" ALT="Modelica_Magnetic.Sources.ElectroMagneticConverter" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources.ElectroMagneticConverter"
+>ElectroMagneticConverter</A>
+</TD><TD>Electro-magnetic energy conversion</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Sources.ConstantFluxS.png" ALT="Modelica_Magnetic.Sources.ConstantFlux" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources.ConstantFlux"
+>ConstantFlux</A>
+</TD><TD>Source of constant magnetic flux</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Sources.SignalFluxS.png" ALT="Modelica_Magnetic.Sources.SignalFlux" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources.SignalFlux"
+>SignalFlux</A>
+</TD><TD>Signal-controlled magnetic flux source</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Sources.CoilDesignS.png" ALT="Modelica_Magnetic.Sources.CoilDesign" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources.CoilDesign"
+>CoilDesign</A>
+</TD><TD>Calculation of winding parameters (wire diameter, number of turns et al.) and recalculation with optionally chosen parameters; to be adapted to particular design tasks</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE ConstantMMF<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Sources.ConstantMMFI.png" ALT="Modelica_Magnetic.Sources.ConstantMMF" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Sources.ConstantMMF"></A><A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources"
+>Modelica_Magnetic.Sources</A>.ConstantMMF</H2>
+<B>Constant magnetomotive force</B><p>
+<IMG SRC="Modelica_Magnetic.FluxTube.Leakage.PartialLeakageD.png" ALT="Modelica_Magnetic.Sources.ConstantMMF">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Magnetic circuits under steady-state conditions, i.e. with stationary magnetic fields (change of magnetic flux  d&Phi;/dt=0) can be described with constant sources of a magnetomotive force (mmf). Constant mmf's are imposed by
+<ul>
+<li>
+coils with stationary current (di/dt=0) and </li>
+<li>
+permanent magnets modelled with <i>Thévenin</i>'s equivalent magnetic circuit. </li>
+</ul>
+For modelling of reluctance actuators with constant mmf sources it is assumed that the armature is fixed so that no motion-induced flux change d&Phi;/dt can occur.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagnetomotiveForce"
+>MagnetomotiveForce</A></TD><TD>theta</TD><TD>&nbsp;</TD><TD>Magnetomotive force [A]</TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> ConstantMMF <font color="darkgreen">&quot;Constant magnetomotive force&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.TwoPortComponent"
+>Modelica_Magnetic.Interfaces.TwoPortComponent</A>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagnetomotiveForce"
+>SI.MagnetomotiveForce</A> theta <font color="darkgreen">&quot;Magnetomotive force&quot;</font>;
+
+<font color="blue">equation </font>
+  V_mag = theta;
+<font color="blue">end </font>ConstantMMF;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE SignalMMF<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Sources.SignalMMFI.png" ALT="Modelica_Magnetic.Sources.SignalMMF" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Sources.SignalMMF"></A><A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources"
+>Modelica_Magnetic.Sources</A>.SignalMMF</H2>
+<B>Signal-controlled magnetomotive force</B><p>
+<IMG SRC="Modelica_Magnetic.Sources.SignalMMFD.png" ALT="Modelica_Magnetic.Sources.SignalMMF">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+In electromagnetic devices, a change of a coil's magnetic flux linkage &Psi; reacts on the electrical subsystem in that a voltage v is induced due to <i>Faraday</i>'s law:
+<pre>
+    v = - d&Psi;/dt
+</pre>
+This reaction can possibly be neglected for
+<ul>
+<li>
+modelling ofelectromagnetic actuators under quasi-stationary conditions (slow current change, slow armature motion),
+<li>
+modelling of current-controlled electromagnetic actuators (ideal current source) and</li>
+<li>
+for system simulation where the system dynamics is not governed by an electromagnetic actuator, but by the surrounding subsystems.
+</ul>
+In these cases, the magnetomotive force (mmf) imposed by a coil can easily be modelled with a signal-controlled mmf source. Except for the neglected dynamics, steady-state actuator forces will be calculated properly in actuator models based on these sources.
+</p>
+<pre></PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+<TR><TD>input <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</A></TD><TD>theta</TD><TD>Magnetomotive force</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> SignalMMF <font color="darkgreen">&quot;Signal-controlled magnetomotive force&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.TwoPortComponent"
+>Modelica_Magnetic.Interfaces.TwoPortComponent</A>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</A> theta <font color="darkgreen">&quot;Magnetomotive force&quot;</font>;
+
+<font color="blue">equation </font>
+  V_mag = theta;
+<font color="blue">end </font>SignalMMF;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE ElectroMagneticConverter<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Sources.ElectroMagneticConverterI.png" ALT="Modelica_Magnetic.Sources.ElectroMagneticConverter" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Sources.ElectroMagneticConverter"></A><A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources"
+>Modelica_Magnetic.Sources</A>.ElectroMagneticConverter</H2>
+<B>Electro-magnetic energy conversion</B><p>
+<IMG SRC="Modelica_Magnetic.Sources.ElectroMagneticConverterD.png" ALT="Modelica_Magnetic.Sources.ElectroMagneticConverter">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+The electro-magnetic energy conversion is given by <i>Ampere</i>'s law and <i>Faraday</i>'s law respectively:
+<pre>
+    V_mag = c_coupl * i*w
+    w * der(&Phi;) =  -c_coupl * v
+</pre>
+V_mag is the magnetomotive force that is supplied to the connected magnetic circuit, &Phi; is the magnetic flux through the associated branch of this magnetic circuit. The negative sign of the induced voltage v is due to <i>Lenz</i>'s law. The coupling coefficient c_coupl denotes leakage: Only a portion of the coil's flux linkage &Psi; contributes to the useful magnetic flux &Phi; in the magnetic circuit. The influence of c_coupl can be interpreted as a leakage inductance connected in series with the inductance that is effective in the magnetic circuit. <br>
+<br>
+The flux linkage &Psi; and the static inductance L_stat = &Psi;/i are calculated for information only. Note that L_stat is set to zero in case of zero current. <br>
+<br>
+The variability of the number of turns w and the coupling coefficient c_coupl is not restricted to <i>parameter</i>, although both variables can be defined as parameters in many modelling cases. The extended variability allows for calculation of w from other variables (i.e. from non-parameters) in a model or for a variable coupling coefficient, e.g. a position-dependent one in an actuator model.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR bgcolor="#e0e0e0"><TD colspan=4>Variables</TD></TR>
+<TR><TD>Real</TD><TD>w</TD><TD>1</TD><TD>Number of turns</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CouplingCoefficient"
+>CouplingCoefficient</A></TD><TD>c_coupl</TD><TD>1</TD><TD>Ratio of coil's complete flux linkage to flux linked with the magnetic circuit; 0 &lt; c_coupl &lt;= 1; 1...complete flux linked with magnetic circuit [1]</TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p_mag</TD><TD>&nbsp;</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n_mag</TD><TD>&nbsp;</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Electrical_Analog_Interfaces.html#Modelica.Electrical.Analog.Interfaces.PositivePin"
+>PositivePin</A></TD><TD>p_el</TD><TD>&nbsp;</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Electrical_Analog_Interfaces.html#Modelica.Electrical.Analog.Interfaces.NegativePin"
+>NegativePin</A></TD><TD>n_el</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> ElectroMagneticConverter <font color="darkgreen">&quot;Electro-magnetic energy conversion&quot;</font>
+
+  <A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>Interfaces.PositiveMagneticPort</A> p_mag;
+  <A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>Interfaces.NegativeMagneticPort</A> n_mag;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Electrical_Analog_Interfaces.html#Modelica.Electrical.Analog.Interfaces.PositivePin"
+>Modelica.Electrical.Analog.Interfaces.PositivePin</A> p_el;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Electrical_Analog_Interfaces.html#Modelica.Electrical.Analog.Interfaces.NegativePin"
+>Modelica.Electrical.Analog.Interfaces.NegativePin</A> n_el;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Voltage"
+>SI.Voltage</A> v <font color="darkgreen">&quot;Voltage&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Current"
+>SI.Current</A> i <font color="darkgreen">&quot;Current&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticPotentialDifference"
+>SI.MagneticPotentialDifference</A> V_mag <font color="darkgreen">&quot;Magnetomotive force&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>SI.MagneticFlux</A> Phi <font color="darkgreen">&quot;Magnetic flux coupled into magnetic circuit&quot;</font>;
+
+  Real w = 1 <font color="darkgreen">&quot;Number of turns&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CouplingCoefficient"
+>SI.CouplingCoefficient</A> c_coupl = 1 <font color="darkgreen">
+    &quot;Ratio of coil's complete flux linkage to flux linked with the magnetic circuit; 0 &lt; c_coupl &lt;= 1; 1...complete flux linked with magnetic circuit&quot;</font>;
+
+  <font color="darkgreen">//for information only:</font>
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>SI.MagneticFlux</A> Psi <font color="darkgreen">&quot;Flux linkage for information only&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Inductance"
+>SI.Inductance</A> L_stat <font color="darkgreen">
+    &quot;Static inductance abs(Psi/i) for information only (Caution: L(i=0) set to zero!)&quot;</font>;
+
+
+<font color="blue">equation </font>
+  v = p_el.v - n_el.v;
+  0 = p_el.i + n_el.i;
+  i = p_el.i;
+
+  V_mag = p_mag.V_mag - n_mag.V_mag;
+  0 = p_mag.Phi + n_mag.Phi;
+  Phi = p_mag.Phi;
+
+  <font color="red">assert</font>(c_coupl&gt;0<font color="blue"> and </font>c_coupl&lt;=1, &quot;c_coupl out of allowed range 0 &lt;= c_coupl &lt;= 1&quot;);
+
+  <font color="darkgreen">//converter equations:</font>
+  V_mag = c_coupl * i*w;<font color="darkgreen">   // Ampere's law</font>
+  w*<font color="red">der</font>(Phi) = - c_coupl * v;<font color="darkgreen">   // Faraday's law</font>
+
+  <font color="darkgreen">//for information only:</font>
+  Psi = w * Phi / c_coupl;
+  <font color="darkgreen">//use of abs() for positive results; due to Modelica sign conventions for flow into connectors:</font>
+  L_stat = <font color="blue">if </font>i&gt;0<font color="blue"> or </font>i&lt;0<font color="blue"> then </font><font color="red">abs</font>(Psi/i)<font color="blue"> else </font>0;
+
+<font color="blue">end </font>ElectroMagneticConverter;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE ConstantFlux<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Sources.ConstantFluxI.png" ALT="Modelica_Magnetic.Sources.ConstantFlux" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Sources.ConstantFlux"></A><A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources"
+>Modelica_Magnetic.Sources</A>.ConstantFlux</H2>
+<B>Source of constant magnetic flux</B><p>
+<IMG SRC="Modelica_Magnetic.Sources.ConstantFluxD.png" ALT="Modelica_Magnetic.Sources.ConstantFlux">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Sources of a constant magnetic flux are useful for modelling of permanent magnets with <i>Norton</i>'s magnetic equivalent circuit.
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>MagneticFlux</A></TD><TD>Phi_source</TD><TD>1</TD><TD>Magnetic source flux [Wb]</TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> ConstantFlux <font color="darkgreen">&quot;Source of constant magnetic flux&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.TwoPortComponent"
+>Modelica_Magnetic.Interfaces.TwoPortComponent</A>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>SI.MagneticFlux</A> Phi_source = 1 <font color="darkgreen">&quot;Magnetic source flux&quot;</font>;
+
+<font color="blue">equation </font>
+  Phi = Phi_source;
+<font color="blue">end </font>ConstantFlux;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE SignalFlux<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Sources.SignalFluxI.png" ALT="Modelica_Magnetic.Sources.SignalFlux" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Sources.SignalFlux"></A><A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources"
+>Modelica_Magnetic.Sources</A>.SignalFlux</H2>
+<B>Signal-controlled magnetic flux source</B><p>
+<IMG SRC="Modelica_Magnetic.Sources.SignalFluxD.png" ALT="Modelica_Magnetic.Sources.SignalFlux">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+This source of a magnetic flux is intended for test purposes, e.g. for simulation and subsequent plotting of a softmagnetic material's magnetisation characteristics if used together with a nonlinear reluctance element.
+</p>
+<pre></PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+<TR><TD>input <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</A></TD><TD>Phi_source</TD><TD>Imposed magnetic flux</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> SignalFlux <font color="darkgreen">&quot;Signal-controlled magnetic flux source&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.TwoPortComponent"
+>Modelica_Magnetic.Interfaces.TwoPortComponent</A>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</A> Phi_source <font color="darkgreen">&quot;Imposed magnetic flux&quot;</font>;
+
+<font color="blue">equation </font>
+  Phi = Phi_source;
+<font color="blue">end </font>SignalFlux;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE CoilDesign<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Sources.CoilDesignI.png" ALT="Modelica_Magnetic.Sources.CoilDesign" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Sources.CoilDesign"></A><A HREF="Modelica_Magnetic_Sources.html#Modelica_Magnetic.Sources"
+>Modelica_Magnetic.Sources</A>.CoilDesign</H2>
+<B>Calculation of winding parameters (wire diameter, number of turns et al.) and recalculation with optionally chosen parameters; to be adapted to particular design tasks</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+This model exemplarily shows dimensioning of a winding (wire diameter, number of turns) based on desired operating conditions (voltage, temperature, current density, conductor filling factor) for a given cross-section area of the winding. It can be modified according to the parameters given and sought after for a particular design project. <br>
+<br>
+The calculated winding resistance and number of turns can be used as input parameters to the electrical subsystem
+of a device to be modelled. Operating voltage U can be minimum, nominal and maximum voltage respectively as specified for a particular design project. In conjunction with the setting of the operating temperature T_opCelsius, this enables for analysis of the device under worst-case conditions (e.g. minimum required magnetomotive force, maximum allowed ohmic losses, minimum and maximum force respectively).<br>
+<br>
+For manufacturing of a winding, the obtained wire diameter d_wireCalculated must be rounded to that of an available wire. In order to analyse the influence of this rounding, one can enter the chosen wire diameter d_wireChosen and number of turns w_chosen as optional input. Calculation of the resulting winding parameters enables for comparison with the ones obtained otherwise. <br>
+<br>
+</p>
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Default</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Resistivity"
+>Resistivity</A></TD><TD>rho_20</TD><TD>0.0178e-6</TD><TD>Resistivity of conductor material at 20°C [Ohm.m]</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>TemperatureCoefficient</A></TD><TD>alpha</TD><TD>0.0039</TD><TD>Temperature coefficient of conductor material's resistivity [1/K]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>CelsiusTemperature</A></TD><TD>T_opCelsius</TD><TD>20</TD><TD>Winding's operating temperature [degC]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Height"
+>Height</A></TD><TD>h_w</TD><TD>&nbsp;</TD><TD>Height of winding's cross-section [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Breadth"
+>Breadth</A></TD><TD>b_w</TD><TD>&nbsp;</TD><TD>Breadth of winding's cross-section [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</A></TD><TD>l_avg</TD><TD>&nbsp;</TD><TD>Average length of one turn [m]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Voltage"
+>Voltage</A></TD><TD>U</TD><TD>&nbsp;</TD><TD>Operating voltage (nominal/ minimum/ maximum voltage depending on design objective) [V]</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CurrentDensity"
+>CurrentDensity</A></TD><TD>J_desired</TD><TD>4e6</TD><TD>DESIRED current density at operating temperature and voltage resp. [A/m2]</TD></TR>
+<TR><TD>Real</TD><TD>c_condFillChosen</TD><TD>0.6</TD><TD>CHOSEN conductor filling factor = total conductor area without insulation/ total winding area</TD></TR>
+<TR bgcolor="#e0e0e0"><TD colspan=4>Chosen feasible parameters (optional)</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Diameter"
+>Diameter</A></TD><TD>d_wireChosen</TD><TD>d_wireCalculated</TD><TD>CHOSEN available wire diameter (without insulation) [m]</TD></TR>
+<TR><TD>Real</TD><TD>w_chosen</TD><TD>w_calculated</TD><TD>CHOSEN number of turns</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">model</font> CoilDesign <font color="darkgreen">
+  &quot;Calculation of winding parameters (wire diameter, number of turns et al.) and recalculation with optionally chosen parameters; to be adapted to particular design tasks&quot;</font>
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Resistivity"
+>SI.Resistivity</A> rho_20 = 0.0178e-6 <font color="darkgreen">
+    &quot;Resistivity of conductor material at 20°C&quot;</font>;<font color="darkgreen">   //default material: Copper</font>
+  <font color="blue">parameter </font><A HREF="Modelica_Magnetic_Utilities.html#Modelica_Magnetic.Utilities.TemperatureCoefficient"
+>Utilities.TemperatureCoefficient</A> alpha = 0.0039 <font color="darkgreen">
+    &quot;Temperature coefficient of conductor material's resistivity&quot;</font>;<font color="darkgreen">   //default material: Copper</font>
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CelsiusTemperature"
+>SI.CelsiusTemperature</A> T_opCelsius = 20 <font color="darkgreen">
+    &quot;Winding's operating temperature&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Resistivity"
+>SI.Resistivity</A> rho = rho_20 * (1 + alpha *(T_opCelsius - 20)) <font color="darkgreen">
+    &quot;Resistivity at operating temperature&quot;</font>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Height"
+>SI.Height</A> h_w <font color="darkgreen">&quot;Height of winding's cross-section&quot;</font>;
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Breadth"
+>SI.Breadth</A> b_w <font color="darkgreen">&quot;Breadth of winding's cross-section&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Area"
+>SI.Area</A> A_w = h_w * b_w <font color="darkgreen">&quot;Cross-section area of winding&quot;</font>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>SI.Length</A> l_avg <font color="darkgreen">&quot;Average length of one turn&quot;</font>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Voltage"
+>SI.Voltage</A> U <font color="darkgreen">
+    &quot;Operating voltage (nominal/ minimum/ maximum voltage depending on design objective)&quot;</font>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CurrentDensity"
+>SI.CurrentDensity</A> J_desired = 4e6 <font color="darkgreen">
+    &quot;DESIRED current density at operating temperature and voltage resp.&quot;</font>;
+
+  <font color="blue">parameter </font>Real c_condFillChosen = 0.6 <font color="darkgreen">
+    &quot;CHOSEN conductor filling factor = total conductor area without insulation/ total winding area&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font>Real w_calculated = U/ (rho * l_avg * J_desired) <font color="darkgreen">
+    &quot;CALCULATED number of turns&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Diameter"
+>SI.Diameter</A> d_wireCalculated =<font color="red"> sqrt</font>(4 * A_w * c_condFillChosen /(pi * w_calculated)) <font color="darkgreen">
+    &quot;CALCULATED wire diameter (without insulation)&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Area"
+>SI.Area</A> A_wireCalculated = pi * d_wireCalculated^2 / 4 <font color="darkgreen">
+    &quot;Calculated wire cross-section area&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Resistance"
+>SI.Resistance</A> R_calculated = rho * w_calculated * l_avg / A_wireCalculated <font color="darkgreen">
+    &quot;Winding resistance at operating temperature and voltage resp. with CALCULATED number of turns and wire diameter&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Power"
+>SI.Power</A> P_calculated = U^2 / R_calculated <font color="darkgreen">
+    &quot;Winding's ohmic losses at operating temperature and voltage resp. with CALCULATED number of turns and wire diameter&quot;</font>;
+
+  <font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Diameter"
+>SI.Diameter</A> d_wireChosen = d_wireCalculated <font color="darkgreen">
+    &quot;CHOSEN available wire diameter (without insulation)&quot;</font>;
+
+  <font color="blue">parameter </font>Real w_chosen = w_calculated <font color="darkgreen">&quot;CHOSEN number of turns&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Area"
+>SI.Area</A> A_wireChosen = pi * d_wireChosen^2 / 4 <font color="darkgreen">
+    &quot;Wire cross-section area resulting from CHOSEN wire diameter&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Resistance"
+>SI.Resistance</A> R_actual = rho * w_chosen * l_avg / A_wireChosen <font color="darkgreen">
+    &quot;Winding resistance at operating temperature and voltage resp. resulting from CHOSEN number of turns and wire diameter&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.Power"
+>SI.Power</A> P_actual = U^2 / R_actual <font color="darkgreen">
+    &quot;Winding's ohmic losses at operating temperature and voltage resp. resulting from CHOSEN number of turns and wire diameter&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.CurrentDensity"
+>SI.CurrentDensity</A> J_actual = U * 4/(R_actual * pi * d_wireChosen^2) <font color="darkgreen">
+    &quot;Current density at operating temperature and voltage resp. resulting from CHOSEN number of turns and wire diameter&quot;</font>;
+
+  <font color="blue">final </font><font color="blue">parameter </font>Real c_condFillActual = w_chosen * pi * d_wireChosen^2 /(4 * A_w) <font color="darkgreen">
+    &quot;Conductor filling factor resulting from CHOSEN number of turns and wire diameter&quot;</font>;
+
+
+<font color="blue">end </font>CoilDesign;
+</PRE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Oct 11 17:08:25 2007.
+</address></BODY>
+</HTML>

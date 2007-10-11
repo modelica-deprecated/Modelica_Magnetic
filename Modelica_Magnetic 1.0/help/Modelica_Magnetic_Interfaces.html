@@ -1,0 +1,254 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica_Magnetic.Interfaces</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Interfaces of magnetic network components&quot;">
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Interfaces<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica_Magnetic.Interfaces"></A><A HREF="Modelica_Magnetic.html#Modelica_Magnetic"
+>Modelica_Magnetic</A>.Interfaces</H2>
+<B>Interfaces of magnetic network components</B>
+<P>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+This package contains connectors for the magnetic domain, partial models for lumped magnetic network components and a partial model with connectors for a one-phase electro-mechanical translatory actuator.
+</p>
+
+<pre></PRE><P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Interfaces.MagneticPortS.png" ALT="Modelica_Magnetic.Interfaces.MagneticPort" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.MagneticPort"
+>MagneticPort</A>
+</TD><TD>Generic magnetic port</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Interfaces.MagneticPortS.png" ALT="Modelica_Magnetic.Interfaces.PositiveMagneticPort" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A>
+</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Interfaces.NegativeMagneticPortS.png" ALT="Modelica_Magnetic.Interfaces.NegativeMagneticPort" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A>
+</TD><TD>Negative magnetic port</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Interfaces.TwoMagneticPortsS.png" ALT="Modelica_Magnetic.Interfaces.TwoMagneticPorts" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.TwoMagneticPorts"
+>TwoMagneticPorts</A>
+</TD><TD>Partial component with two magnetic ports p and n</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Interfaces.TwoMagneticPortsS.png" ALT="Modelica_Magnetic.Interfaces.TwoPortComponent" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.TwoPortComponent"
+>TwoPortComponent</A>
+</TD><TD>Partial component with magnetic potential difference between two magnetic ports p and n and magnetic flux Phi from p to n</TD></TR>
+<TR><TD><IMG SRC="Modelica_Magnetic.Interfaces.ElectromechanicalActuatorS.png" ALT="Modelica_Magnetic.Interfaces.ElectromechanicalActuator" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.ElectromechanicalActuator"
+>ElectromechanicalActuator</A>
+</TD><TD>Connectors of a generic translatory actuator with one electrical phase</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE MagneticPort<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Interfaces.MagneticPortI.png" ALT="Modelica_Magnetic.Interfaces.MagneticPort" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Interfaces.MagneticPort"></A><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces"
+>Modelica_Magnetic.Interfaces</A>.MagneticPort</H2>
+<B>Generic magnetic port</B><p>
+<IMG SRC="Modelica_Magnetic.Interfaces.MagneticPortD.png" ALT="Modelica_Magnetic.Interfaces.MagneticPort">
+<H3>Contents</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticPotential"
+>MagneticPotential</A></TD><TD>V_mag</TD><TD>Magnetic potential at the port [A]</TD></TR>
+<TR><TD>flow <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>MagneticFlux</A></TD><TD>Phi</TD><TD>Magnetic flux flowing into the port [Wb]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">connector</font> MagneticPort <font color="darkgreen">&quot;Generic magnetic port&quot;</font>
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticPotential"
+>SI.MagneticPotential</A> V_mag <font color="darkgreen">&quot;Magnetic potential at the port&quot;</font>;
+  <font color="blue">flow </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>SI.MagneticFlux</A> Phi <font color="darkgreen">&quot;Magnetic flux flowing into the port&quot;</font>;
+
+<font color="blue">end </font>MagneticPort;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE PositiveMagneticPort<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Interfaces.MagneticPortI.png" ALT="Modelica_Magnetic.Interfaces.PositiveMagneticPort" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Interfaces.PositiveMagneticPort"></A><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces"
+>Modelica_Magnetic.Interfaces</A>.PositiveMagneticPort</H2>
+<B>Positive magnetic port</B><p>
+<IMG SRC="Modelica_Magnetic.Interfaces.PositiveMagneticPortD.png" ALT="Modelica_Magnetic.Interfaces.PositiveMagneticPort">
+<H3>Contents</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticPotential"
+>MagneticPotential</A></TD><TD>V_mag</TD><TD>Magnetic potential at the port [A]</TD></TR>
+<TR><TD>flow <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>MagneticFlux</A></TD><TD>Phi</TD><TD>Magnetic flux flowing into the port [Wb]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">connector</font> PositiveMagneticPort <font color="darkgreen">&quot;Positive magnetic port&quot;</font>
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticPotential"
+>SI.MagneticPotential</A> V_mag <font color="darkgreen">&quot;Magnetic potential at the port&quot;</font>;
+  <font color="blue">flow </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>SI.MagneticFlux</A> Phi <font color="darkgreen">&quot;Magnetic flux flowing into the port&quot;</font>;
+
+
+<font color="blue">end </font>PositiveMagneticPort;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE NegativeMagneticPort<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Interfaces.NegativeMagneticPortI.png" ALT="Modelica_Magnetic.Interfaces.NegativeMagneticPort" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Interfaces.NegativeMagneticPort"></A><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces"
+>Modelica_Magnetic.Interfaces</A>.NegativeMagneticPort</H2>
+<B>Negative magnetic port</B><p>
+<IMG SRC="Modelica_Magnetic.Interfaces.NegativeMagneticPortD.png" ALT="Modelica_Magnetic.Interfaces.NegativeMagneticPort">
+<H3>Contents</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticPotential"
+>MagneticPotential</A></TD><TD>V_mag</TD><TD>Magnetic potential at the port [A]</TD></TR>
+<TR><TD>flow <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>MagneticFlux</A></TD><TD>Phi</TD><TD>Magnetic flux flowing into the port [Wb]</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">connector</font> NegativeMagneticPort <font color="darkgreen">&quot;Negative magnetic port&quot;</font>
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticPotential"
+>SI.MagneticPotential</A> V_mag <font color="darkgreen">&quot;Magnetic potential at the port&quot;</font>;
+  <font color="blue">flow </font><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>SI.MagneticFlux</A> Phi <font color="darkgreen">&quot;Magnetic flux flowing into the port&quot;</font>;
+
+
+<font color="blue">end </font>NegativeMagneticPort;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE TwoMagneticPorts<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Interfaces.TwoMagneticPortsI.png" ALT="Modelica_Magnetic.Interfaces.TwoMagneticPorts" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Interfaces.TwoMagneticPorts"></A><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces"
+>Modelica_Magnetic.Interfaces</A>.TwoMagneticPorts</H2>
+<B>Partial component with two magnetic ports p and n</B><p>
+<IMG SRC="Modelica_Magnetic.Interfaces.TwoMagneticPortsD.png" ALT="Modelica_Magnetic.Interfaces.TwoMagneticPorts">
+<H3>Information</H3>
+<PRE></pre>
+<P>
+Partial model of a flux tube component with <b>two</b> magnetic ports:
+the positive port connector <i>p</i>, and the negative port
+connector <i>n</i>.
+</P>
+<pre>
+</PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">partial </font><font color="blue">model</font> TwoMagneticPorts <font color="darkgreen">
+  &quot;Partial component with two magnetic ports p and n&quot;</font>
+
+  <A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A> p <font color="darkgreen">&quot;Positive magnetic port&quot;</font>;
+  <A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A> n <font color="darkgreen">&quot;Negative magnetic port&quot;</font>;
+
+<font color="blue">equation </font>
+
+<font color="blue">end </font>TwoMagneticPorts;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE TwoPortComponent<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Interfaces.TwoMagneticPortsI.png" ALT="Modelica_Magnetic.Interfaces.TwoPortComponent" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Interfaces.TwoPortComponent"></A><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces"
+>Modelica_Magnetic.Interfaces</A>.TwoPortComponent</H2>
+<B>Partial component with magnetic potential difference between two magnetic ports p and n and magnetic flux Phi from p to n</B><p>
+<IMG SRC="Modelica_Magnetic.Interfaces.TwoMagneticPortsD.png" ALT="Modelica_Magnetic.Interfaces.TwoPortComponent">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+It is assumed that the magnetic flux flowing into pin p is identical to the flux flowing out of pin n.
+This magnetic flux is provided explicitly as flux Phi.
+<pre></PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.PositiveMagneticPort"
+>PositiveMagneticPort</A></TD><TD>p</TD><TD>Positive magnetic port</TD></TR>
+<TR><TD><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.NegativeMagneticPort"
+>NegativeMagneticPort</A></TD><TD>n</TD><TD>Negative magnetic port</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">partial </font><font color="blue">model</font> TwoPortComponent <font color="darkgreen">
+  &quot;Partial component with magnetic potential difference between two magnetic ports p and n and magnetic flux Phi from p to n&quot;</font>
+
+  <font color="blue">extends </font><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces.TwoMagneticPorts"
+>TwoMagneticPorts</A>;
+
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticPotentialDifference"
+>SI.MagneticPotentialDifference</A> V_mag <font color="darkgreen">
+    &quot;Magnetic potential difference between both ports&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_SIunits.html#Modelica.SIunits.MagneticFlux"
+>SI.MagneticFlux</A> Phi <font color="darkgreen">&quot;Magnetic flux from port p to port n&quot;</font>;
+
+<font color="blue">equation </font>
+  V_mag = p.V_mag - n.V_mag;
+  Phi = p.Phi;
+  0 = p.Phi + n.Phi;
+
+<font color="blue">end </font>TwoPortComponent;
+</PRE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE ElectromechanicalActuator<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica_Magnetic.Interfaces.ElectromechanicalActuatorI.png" ALT="Modelica_Magnetic.Interfaces.ElectromechanicalActuator" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica_Magnetic.Interfaces.ElectromechanicalActuator"></A><A HREF="Modelica_Magnetic_Interfaces.html#Modelica_Magnetic.Interfaces"
+>Modelica_Magnetic.Interfaces</A>.ElectromechanicalActuator</H2>
+<B>Connectors of a generic translatory actuator with one electrical phase</B><p>
+<IMG SRC="Modelica_Magnetic.Interfaces.ElectromechanicalActuatorD.png" ALT="Modelica_Magnetic.Interfaces.ElectromechanicalActuator">
+<H3>Information</H3>
+<PRE></pre>
+<p>
+This partial model defines connectors for any kind of electro-mechanical actuator with translatory motion
+and one electrical phase (e.g. electrodynamic, electromagnetic, piezoelectric and thermal actuators).
+</p>
+<pre></PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Type</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Electrical_Analog_Interfaces.html#Modelica.Electrical.Analog.Interfaces.NegativePin"
+>NegativePin</A></TD><TD>n</TD><TD>Electrical connector</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Electrical_Analog_Interfaces.html#Modelica.Electrical.Analog.Interfaces.PositivePin"
+>PositivePin</A></TD><TD>p</TD><TD>Electrical connector</TD></TR>
+<TR><TD><A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Mechanics_Translational_Interfaces.html#Modelica.Mechanics.Translational.Interfaces.Flange_a"
+>Flange_a</A></TD><TD>flange</TD><TD>Flange for connection to translatory load</TD></TR>
+</TABLE>
+<H3>Modelica definition</H3>
+<PRE>
+<font color="blue">partial </font><font color="blue">model</font> ElectromechanicalActuator <font color="darkgreen">
+  &quot;Connectors of a generic translatory actuator with one electrical phase&quot;</font>
+
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Electrical_Analog_Interfaces.html#Modelica.Electrical.Analog.Interfaces.NegativePin"
+>Modelica.Electrical.Analog.Interfaces.NegativePin</A> n <font color="darkgreen">&quot;Electrical connector&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Electrical_Analog_Interfaces.html#Modelica.Electrical.Analog.Interfaces.PositivePin"
+>Modelica.Electrical.Analog.Interfaces.PositivePin</A> p <font color="darkgreen">&quot;Electrical connector&quot;</font>;
+  <A HREF="file:///C:/dymola/Modelica/Library/Modelica 2.2.1/help/Modelica_Mechanics_Translational_Interfaces.html#Modelica.Mechanics.Translational.Interfaces.Flange_a"
+>Modelica.Mechanics.Translational.Interfaces.Flange_a</A> flange <font color="darkgreen">
+    &quot;Flange for connection to translatory load&quot;</font>;
+<font color="blue">end </font>ElectromechanicalActuator;
+</PRE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Oct 11 17:08:24 2007.
+</address></BODY>
+</HTML>
